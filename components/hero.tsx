@@ -7,6 +7,7 @@ import { ShimmerButton } from "@/components/ui/shimmer-button"
 import { TextAnimate } from "@/components/ui/text-animate"
 import { DotPattern } from "@/components/ui/dot-pattern"
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text"
+import { AuroraText } from "@/components/ui/aurora-text"
 import { WordRotate } from "@/components/ui/word-rotate"
 import { Globe } from "@/components/ui/globe"
 
@@ -45,7 +46,7 @@ export function Hero() {
           >
             <AnimatedGradientText className="mb-6 inline-flex">
               <span className="text-sm font-medium text-muted-foreground">
-                Santiago, Chile &middot; 6.504 km de ciclovías
+                Santiago, Chile &middot; <AuroraText className="text-sm font-medium" colors={["#16a34a", "#22c55e", "#15803d", "#4ade80"]} speed={0.5}>6.504 km de ciclovías</AuroraText>
               </span>
             </AnimatedGradientText>
           </motion.div>

@@ -128,7 +128,7 @@ export function Problem() {
                       <div className="flex flex-col gap-3 md:flex-row md:items-start md:gap-8">
                         <div className="flex shrink-0 items-baseline gap-3">
                           <span
-                            className="font-bold tracking-tighter text-primary/20"
+                            className="font-bold tracking-tighter text-[oklch(0.65_0.17_160)]"
                             style={{
                               fontSize: `${2.5 + i * 0.75}rem`,
                               lineHeight: 1,
@@ -136,7 +136,7 @@ export function Problem() {
                           >
                             {point.number}
                           </span>
-                          <span className="text-[10px] font-semibold uppercase tracking-widest text-primary/50">
+                          <span className="text-[10px] font-semibold uppercase tracking-widest text-[oklch(0.65_0.17_160)]">
                             {point.severity}
                           </span>
                         </div>

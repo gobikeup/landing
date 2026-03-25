@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -23,11 +24,15 @@
   --input: oklch(0.9731 0 0);
   --ring: oklch(0.55 0.17 160);
   --radius: 0.625rem;
+  --footer-bg: oklch(0.9461 0 0);
+  --footer-text: oklch(0.2046 0 0);
 }
 
 .dark {
   --background: oklch(0.1822 0 0);
   --foreground: oklch(0.9288 0.0126 255.5078);
+  --footer-bg: var(--background);
+  --footer-text: oklch(0.95 0 0);
   --card: oklch(0.2046 0 0);
   --card-foreground: oklch(0.9288 0.0126 255.5078);
   --popover: oklch(0.2603 0 0);
@@ -113,6 +118,29 @@
   to {
     background-position: 0% 0%;
     }
+  }
+  --animate-aurora: aurora 8s ease-in-out infinite alternate;
+  @keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);
+    }
+  25% {
+    background-position: 50% 100%;
+    transform: rotate(5deg) scale(1.1);
+    }
+  50% {
+    background-position: 100% 50%;
+    transform: rotate(-3deg) scale(0.95);
+    }
+  75% {
+    background-position: 50% 0%;
+    transform: rotate(3deg) scale(1.05);
+    }
+  100% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);
+    }
   }}
 
 body {
@@ -130,4 +158,3 @@ body {
   0% { transform: translateX(-100%); }
   50%, 100% { transform: translateX(100%); }
 }
-
