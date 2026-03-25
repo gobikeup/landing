@@ -1,49 +1,49 @@
 # GoBikeUp
 
-> La primera app de navegacion ciclista para Santiago de Chile. "Pedalea tranquilo."
+> La primera app de navegación ciclista para Santiago de Chile. "Pedalea tranquilo."
 
-GoBikeUp es una aplicacion movil (iOS y Android) que resuelve los tres principales problemas del ciclismo urbano en Santiago de Chile:
-1. Rutas calculadas exclusivamente por ciclovias reales, no avenidas de alto trafico
-2. Boton SOS de emergencia activable en 3 segundos desde la bicicleta
+GoBikeUp es una aplicación móvil (iOS y Android) que resuelve los tres principales problemas del ciclismo urbano en Santiago de Chile:
+1. Rutas calculadas exclusivamente por ciclovías reales, no avenidas de alto tráfico
+2. Botón SOS de emergencia activable en 3 segundos desde la bicicleta
 3. Alertas comunitarias en tiempo real sobre peligros en la ruta
 
 ## Producto
 
-- Plataforma: Aplicacion movil gratuita para iOS y Android
-- Ciudad: Santiago de Chile (unica ciudad soportada en v1)
-- Idioma: Espanol
-- Estado: Proximo lanzamiento — waitlist activa en www.gobikeup.com
+- Plataforma: Aplicación móvil gratuita para iOS y Android
+- Ciudad: Santiago de Chile (única ciudad soportada en v1)
+- Idioma: Español
+- Estado: Próximo lanzamiento — waitlist activa en www.gobikeup.com
 - Precio: Gratuito
 
 ## Features principales
 
-### Navegacion por ciclovias
-Rutas turn-by-turn calculadas sobre 6.504 km de ciclovias de Santiago, con datos oficiales de SECTRA (Secretaria de Planificacion de Transporte). A diferencia de Google Maps o Waze, GoBikeUp prioriza exclusivamente la red de ciclovias de la ciudad.
+### Navegación por ciclovías
+Rutas turn-by-turn calculadas sobre 6.504 km de ciclovías de Santiago, con datos oficiales de SECTRA (Secretaría de Planificación de Transporte). A diferencia de Google Maps o Waze, GoBikeUp prioriza exclusivamente la red de ciclovías de la ciudad.
 
 ### SOS Emergencia
-Boton de emergencia activable con presion prolongada (3 segundos). Al activarse: envia SMS con ubicacion GPS a contactos de emergencia, abre deep link a WhatsApp, y llama directamente al 131 (numero de emergencias de Chile). Sin necesidad de soltar el manubrio.
+Botón de emergencia activable con presión prolongada (3 segundos). Al activarse: envía SMS con ubicación GPS a contactos de emergencia, abre deep link a WhatsApp, y llama directamente al 131 (número de emergencias de Chile). Sin necesidad de soltar el manubrio.
 
 ### Alertas comunitarias
-8 tipos de reporte generados por usuarios: bache, vidrio en la via, robo, obra, perro suelto, ciclovia bloqueada, accidente y desvio. Las alertas tienen votos de confirmacion y expiracion automatica. Se muestran en el mapa en tiempo real.
+8 tipos de reporte generados por usuarios: bache, vidrio en la vía, robo, obra, perro suelto, ciclovía bloqueada, accidente y desvío. Las alertas tienen votos de confirmación y expiración automática. Se muestran en el mapa en tiempo real.
 
 ### Talleres de bicicleta
-Directorio con mapa de talleres de reparacion de bicicletas en Santiago. Pins con clustering, ficha completa de cada taller y contacto directo. Busqueda por tipo de servicio y cercania.
+Directorio con mapa de talleres de reparación de bicicletas en Santiago. Pins con clustering, ficha completa de cada taller y contacto directo. Búsqueda por tipo de servicio y cercanía.
 
 ### Marketplace de servicios
-Busca talleres por tipo de servicio y cercania. Reviews de la comunidad ciclista. Contacto directo con el taller.
+Busca talleres por tipo de servicio y cercanía. Reviews de la comunidad ciclista. Contacto directo con el taller.
 
 ## Datos clave
 
-- 6.504 km de ciclovias mapeadas en Santiago (fuente: SECTRA)
+- 6.504 km de ciclovías mapeadas en Santiago (fuente: SECTRA)
 - 8 tipos de alertas comunitarias disponibles
 - SOS activable en 3 segundos
 - Llamada directa al 131 (emergencias Chile)
 
 ## Contexto
 
-Santiago de Chile tiene una de las redes de ciclovias mas extensas de Latinoamerica, pero ninguna app de navegacion existente (Google Maps, Waze, Apple Maps) usa las ciclovias reales como criterio de ruteo. GoBikeUp es la primera solucion especifica para ciclistas urbanos en Santiago.
+Santiago de Chile tiene una de las redes de ciclovías más extensas de Latinoamérica, pero ninguna app de navegación existente (Google Maps, Waze, Apple Maps) usa las ciclovías reales como criterio de ruteo. GoBikeUp es la primera solución específica para ciclistas urbanos en Santiago.
 
 ## Contacto
 
 - Web: https://www.gobikeup.com
-- Email: hola@gobikeup.com
+- Email: contacto@gobikeup.com

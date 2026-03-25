@@ -5,9 +5,9 @@ import { BlurFade } from "@/components/ui/blur-fade"
 
 const features = [
   {
-    title: "Rutas reales por ciclovias.",
+    title: "Rutas reales por ciclovías.",
     description:
-      "Calculadas sobre 6.504 km de ciclovias de Santiago con datos de SECTRA. Turn-by-turn real. No mas avenidas de 4 carriles.",
+      "Calculadas sobre 6.504 km de ciclovías de Santiago con datos de SECTRA. Andrés Bello, Pocuro, Alameda, Costanera — turn-by-turn real. No más avenidas de 4 carriles.",
     gradient:
       "radial-gradient(ellipse at 30% 50%, oklch(0.6 0.14 160 / 0.3), transparent 60%), radial-gradient(ellipse at 70% 30%, oklch(0.55 0.12 155 / 0.2), transparent 50%), radial-gradient(ellipse at 50% 80%, oklch(0.5 0.08 165 / 0.15), transparent 60%), linear-gradient(135deg, oklch(0.92 0.02 160) 0%, oklch(0.96 0.01 160) 50%, oklch(0.9 0.03 155) 100%)",
   },
@@ -21,21 +21,21 @@ const features = [
   {
     title: "Alertas comunitarias.",
     description:
-      "8 tipos de reporte: bache, vidrio, robo, obra, perro, ciclovia bloqueada. Votos y expiracion automatica.",
+      "8 tipos de reporte: bache, vidrio, robo, obra, perro, ciclovía bloqueada. Votos y expiración automática.",
     gradient:
       "radial-gradient(ellipse at 40% 30%, oklch(0.58 0.13 160 / 0.25), transparent 55%), radial-gradient(ellipse at 70% 70%, oklch(0.52 0.1 155 / 0.15), transparent 50%), linear-gradient(160deg, oklch(0.93 0.015 160) 0%, oklch(0.95 0.01 165) 100%)",
   },
   {
-    title: "Talleres en el mapa.",
+    title: "Talleres de bicicleta en Santiago.",
     description:
-      "Pins con clustering, ficha completa y contacto directo. Ayuda cerca cuando la necesitas.",
+      "Pins con clustering, ficha completa y contacto directo. Desde Maipú hasta Las Condes, ayuda cerca cuando la necesitas.",
     gradient:
       "radial-gradient(ellipse at 50% 40%, oklch(0.57 0.12 158 / 0.22), transparent 55%), radial-gradient(ellipse at 25% 75%, oklch(0.53 0.09 162 / 0.12), transparent 50%), linear-gradient(145deg, oklch(0.92 0.018 158) 0%, oklch(0.96 0.008 162) 100%)",
   },
   {
     title: "Marketplace de servicios.",
     description:
-      "Busca por tipo de servicio y cercania. Reviews de la comunidad. Conecta directo.",
+      "Busca por tipo de servicio y cercanía. Reviews de la comunidad. Conecta directo.",
     gradient:
       "radial-gradient(ellipse at 65% 35%, oklch(0.56 0.11 163 / 0.2), transparent 55%), radial-gradient(ellipse at 35% 65%, oklch(0.54 0.1 157 / 0.15), transparent 50%), linear-gradient(130deg, oklch(0.94 0.012 163) 0%, oklch(0.92 0.02 157) 100%)",
   },
@@ -54,12 +54,12 @@ export function Features() {
           </BlurFade>
           <BlurFade delay={0.08} inView>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              5 cosas que hacen la diferencia.
+              5 funciones para ciclistas en Santiago.
             </h2>
           </BlurFade>
           <BlurFade delay={0.14} inView>
             <p className="mt-4 text-base text-muted-foreground lg:text-lg">
-              No 20 features a medias. 5 que funcionan perfecto desde el dia uno.
+              No 20 features a medias. 5 que funcionan perfecto desde el día uno en toda la Región Metropolitana.
             </p>
           </BlurFade>
         </div>

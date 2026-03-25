@@ -4,7 +4,7 @@ import { DotPattern } from "@/components/ui/dot-pattern"
 const footerLinks = {
   Producto: [
     { label: "Features", href: "#features" },
-    { label: "Como funciona", href: "#como-funciona" },
+    { label: "Cómo funciona", href: "#como-funciona" },
     { label: "Waitlist", href: "#descargar" },
   ],
   Contacto: [
@@ -48,7 +48,7 @@ export function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="block py-1 text-sm text-[var(--footer-text)]/40 transition-colors hover:text-primary"
+                      className="block py-3 text-sm text-[var(--footer-text)]/40 transition-colors hover:text-primary"
                     >
                       {link.label}
                     </a>

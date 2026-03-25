@@ -9,19 +9,19 @@ const steps = [
     icon: Smartphone,
     title: "Abre la app",
     description:
-      "El mapa carga con tu posicion y la red de ciclovias de Santiago. Sin login obligatorio, sin setup.",
+      "El mapa carga con tu posición y la red de ciclovías de Santiago. Sin login obligatorio, sin setup.",
   },
   {
     icon: MapPin,
     title: "Elige tu destino",
     description:
-      "Busca una direccion y recibe la ruta optima por ciclovias reales de Santiago.",
+      "Busca una dirección y recibe la ruta óptima por ciclovías reales de Santiago.",
   },
   {
     icon: Bike,
     title: "Pedalea tranquilo",
     description:
-      "Navegacion turn-by-turn, alertas en tiempo real y SOS siempre disponible.",
+      "Navegación turn-by-turn, alertas en tiempo real y SOS siempre disponible.",
     isDestination: true,
   },
 ]
@@ -56,17 +56,17 @@ export function HowItWorks() {
         <div className="mx-auto max-w-2xl text-center">
           <BlurFade delay={0} inView>
             <p className="mb-4 text-sm font-medium text-primary">
-              Como funciona
+              Cómo funciona
             </p>
           </BlurFade>
           <BlurFade delay={0.08} inView>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Abres y pedaleas.
+              Cómo navegar en bici por Santiago.
             </h2>
           </BlurFade>
           <BlurFade delay={0.14} inView>
             <p className="mt-4 text-base text-muted-foreground lg:text-lg">
-              Sin tutoriales, sin crear cuenta, sin configurar nada. Asi de simple.
+              Sin tutoriales, sin crear cuenta, sin configurar nada. Así de simple.
             </p>
           </BlurFade>
         </div>

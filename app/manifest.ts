@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "GoBikeUp — Pedalea tranquilo por Santiago",
     short_name: "GoBikeUp",
     description:
-      "App de navegacion ciclista para Santiago de Chile con rutas por ciclovias reales, SOS emergencia y alertas comunitarias.",
+      "App de navegación ciclista para Santiago de Chile con rutas por ciclovías reales, SOS emergencia y alertas comunitarias.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -26,6 +26,7 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/icon-512.png",
         sizes: "512x512",
         type: "image/png",
+        purpose: "maskable",
       },
     ],
   }

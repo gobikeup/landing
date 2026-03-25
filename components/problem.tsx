@@ -2,11 +2,30 @@
 
 import { motion, useInView } from "motion/react"
 import { useRef } from "react"
-import Lottie from "lottie-react"
+import dynamic from "next/dynamic"
 import { MapPinOff, ShieldOff, EyeOff } from "lucide-react"
 import { Highlighter } from "@/components/ui/highlighter"
 import { BlurFade } from "@/components/ui/blur-fade"
-import cyclistAnimation from "@/public/animations/Cycler.json"
+
+const CyclistLottie = dynamic(
+  () =>
+    Promise.all([
+      import("lottie-react"),
+      import("@/public/animations/Cycler.json"),
+    ]).then(([Lottie, animation]) => {
+      return function CyclistAnimation() {
+        return (
+          <Lottie.default
+            animationData={animation.default}
+            loop
+            aria-hidden="true"
+            className="w-full opacity-80"
+          />
+        )
+      }
+    }),
+  { ssr: false }
+)
 
 const painPoints = [
   {
@@ -78,9 +97,9 @@ export function Problem() {
             </BlurFade>
             <BlurFade delay={0.2} inView>
               <p className="mt-4 mb-16 max-w-xl text-lg text-muted-foreground md:mb-20">
-                Miles de ciclistas salen cada dia sin rutas reales, sin red de
+                Miles de ciclistas salen cada día sin rutas reales, sin red de
                 emergencia, sin nadie que les avise lo que viene. GoBikeUp es la
-                primera app de navegacion ciclista pensada para Santiago.
+                primera app de navegación ciclista pensada para Santiago.
               </p>
             </BlurFade>
 
@@ -166,11 +185,7 @@ export function Problem() {
           <div className="hidden lg:block">
             <BlurFade delay={0.4} inView>
               <div className="sticky top-32">
-                <Lottie
-                  animationData={cyclistAnimation}
-                  loop
-                  className="w-full opacity-80"
-                />
+                <CyclistLottie />
               </div>
             </BlurFade>
           </div>

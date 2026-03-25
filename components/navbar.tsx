@@ -31,7 +31,7 @@ export function Navbar() {
 
   return (
     <nav
-      aria-label="Navegacion principal"
+      aria-label="Navegación principal"
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled
           ? "border-b border-border bg-background/80 backdrop-blur-xl"
@@ -65,7 +65,7 @@ export function Navbar() {
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }
-            className="flex h-11 w-11 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+            className="flex h-12 w-12 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
             aria-label="Cambiar tema"
           >
             {mounted && resolvedTheme === "dark" ? (
@@ -81,15 +81,15 @@ export function Navbar() {
               shimmerColor="var(--primary-foreground)"
               background="var(--primary)"
             >
-              <span className="text-primary-foreground">Unete a la waitlist</span>
+              <span className="text-primary-foreground">Únete a la waitlist</span>
             </ShimmerButton>
           </a>
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <button
-                className="flex h-11 w-11 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-accent hover:text-foreground md:hidden"
-                aria-label="Menu"
+                className="flex h-12 w-12 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-accent hover:text-foreground md:hidden"
+                aria-label="Abrir menú de navegación"
               >
                 <Menu className="h-5 w-5" />
               </button>
@@ -113,7 +113,7 @@ export function Navbar() {
                     shimmerColor="var(--primary-foreground)"
                     background="var(--primary)"
                   >
-                    <span className="text-primary-foreground">Unete a la waitlist</span>
+                    <span className="text-primary-foreground">Únete a la waitlist</span>
                   </ShimmerButton>
                 </a>
               </div>

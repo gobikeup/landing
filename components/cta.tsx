@@ -60,7 +60,7 @@ export function CTA() {
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <BlurFade delay={0} inView>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              Sé de los primeros en pedalear tranquilo.
+              Únete a la app ciclista de Santiago.
             </h2>
           </BlurFade>
           <BlurFade delay={0.1} inView>
@@ -83,9 +83,17 @@ export function CTA() {
                 aria-hidden="true"
                 className="absolute left-[-9999px] opacity-0 h-0 w-0"
               />
+              <label htmlFor="waitlist-email" className="sr-only">
+                Tu correo electrónico
+              </label>
               <Input
+                id="waitlist-email"
                 type="email"
+                name="email"
                 placeholder="tu@email.com"
+                autoComplete="email"
+                required
+                aria-describedby="waitlist-hint"
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value)
@@ -112,12 +120,16 @@ export function CTA() {
 
           <BlurFade delay={0.3} inView>
             {message ? (
-              <p className={`mt-4 text-sm ${status === "error" ? "text-red-500" : "text-primary"}`}>
+              <p
+                role="status"
+                aria-live="polite"
+                className={`mt-4 text-sm ${status === "error" ? "text-[var(--destructive)]" : "text-primary"}`}
+              >
                 {message}
               </p>
             ) : (
-              <p className="mt-4 text-xs text-muted-foreground/60">
-                Sin spam. Un aviso, cuando lancemos.
+              <p id="waitlist-hint" className="mt-4 text-xs text-muted-foreground/60">
+                Sin spam. Un aviso, cuando lancemos en Santiago.
               </p>
             )}
           </BlurFade>

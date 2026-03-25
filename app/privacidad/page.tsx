@@ -4,7 +4,10 @@ import { ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Política de Privacidad — GoBikeUp",
-  description: "Política de privacidad de GoBikeUp. Cómo recolectamos, usamos y protegemos tu información.",
+  description: "Política de privacidad de GoBikeUp. Cómo recolectamos, usamos y protegemos tu información personal en nuestra app de navegación ciclista para Santiago de Chile.",
+  alternates: {
+    canonical: "https://www.gobikeup.com/privacidad",
+  },
 }
 
 export default function PrivacidadPage() {

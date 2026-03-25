@@ -19,7 +19,7 @@ const SANTIAGO_GLOBE = {
   theta: 0.35,
   dark: 0,
   diffuse: 0.4,
-  mapSamples: 36000,
+  mapSamples: 16000,
   mapBrightness: 1.2,
   baseColor: [0.9, 0.9, 0.9] as [number, number, number],
   markerColor: [0.32, 0.69, 0.46] as [number, number, number],
@@ -68,19 +68,15 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-6 flex max-w-xl flex-col gap-2"
           >
-            <span className="sr-only">
-              La primera app de navegacion ciclista pensada para ciclistas en Santiago de Chile.
-              Rutas reales por ciclovias, emergencia SOS y una comunidad que te cuida.
-            </span>
-            <span aria-hidden="true" className="block text-lg leading-relaxed text-muted-foreground">
-              La primera app de navegacion pensada para{" "}
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              La primera app de navegación ciclista para{" "}
               <WordRotate
-                words={["ciclistas", "Santiago", "ti"]}
-                className="inline-block font-semibold text-primary"
+                words={["ciclistas en Santiago", "Providencia y Las Condes", "Ñuñoa y Santiago Centro", "ti"]}
+                className="inline-block min-w-[14ch] font-semibold text-primary"
               />
-            </span>
-            <p aria-hidden="true" className="text-muted-foreground">
-              Rutas reales por ciclovias, emergencia SOS y una comunidad que te
+            </p>
+            <p className="text-muted-foreground">
+              Rutas reales por ciclovías, emergencia SOS y una comunidad que te
               cuida.
             </p>
           </motion.div>
@@ -127,6 +123,7 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="relative hidden aspect-square lg:block"
+          aria-hidden="true"
         >
           <Globe config={SANTIAGO_GLOBE} />
         </motion.div>

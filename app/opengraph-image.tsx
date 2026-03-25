@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og"
 
-export const alt = "GoBikeUp — App de navegacion ciclista en Santiago de Chile"
+export const alt = "GoBikeUp — App de navegación ciclista en Santiago de Chile"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -90,7 +90,7 @@ export default async function Image() {
             color: "rgba(255, 255, 255, 0.4)",
           }}
         >
-          <span style={{ display: "flex" }}>Rutas por ciclovias</span>
+          <span style={{ display: "flex" }}>Rutas por ciclovías</span>
           <span style={{ display: "flex", color: "rgba(22, 163, 74, 0.6)" }}>·</span>
           <span style={{ display: "flex" }}>SOS Emergencia</span>
           <span style={{ display: "flex", color: "rgba(22, 163, 74, 0.6)" }}>·</span>

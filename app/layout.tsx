@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 const inter = Inter({
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   variable: "--font-inter",
   weight: ["400", "500", "600", "700"],
 })
@@ -21,36 +21,43 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.gobikeup.com"),
   title: {
-    default: "GoBikeUp — App de navegacion ciclista en Santiago",
+    default: "GoBikeUp — Ciclovías y Rutas Ciclistas en Santiago",
     template: "%s | GoBikeUp",
   },
   description:
-    "Navega Santiago en bicicleta con rutas por ciclovias reales, boton SOS de emergencia, alertas comunitarias en tiempo real y talleres cerca de ti.",
+    "La app para navegar Santiago en bicicleta por ciclovías reales. Rutas ciclistas, botón SOS de emergencia, alertas comunitarias y talleres cerca de ti. Únete gratis.",
   keywords: [
-    "ciclovias Santiago",
-    "app ciclista Chile",
+    "ciclovías Santiago",
+    "app ciclista Santiago",
     "rutas bicicleta Santiago",
-    "navegacion ciclista",
-    "SOS bicicleta",
+    "navegación ciclista",
+    "mapa ciclovías Santiago",
     "talleres bicicleta Santiago",
+    "app para ciclistas",
     "GoBikeUp",
     "pedalea tranquilo",
-    "movilidad ciclista",
-    "ciclovias Chile",
+    "seguridad ciclista Santiago",
   ],
   authors: [{ name: "GoBikeUp" }],
   creator: "GoBikeUp",
   alternates: {
     canonical: "https://www.gobikeup.com",
+    languages: {
+      "es-CL": "https://www.gobikeup.com",
+      "x-default": "https://www.gobikeup.com",
+    },
   },
   robots: {
     index: true,
     follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large" as const,
+    "max-video-preview": -1,
   },
   openGraph: {
-    title: "GoBikeUp — Pedalea tranquilo por Santiago",
+    title: "GoBikeUp — App ciclista para Santiago de Chile",
     description:
-      "La app de navegacion ciclista para Santiago. Rutas por ciclovias reales, SOS emergencia, alertas comunitarias y talleres cerca de ti.",
+      "Navega Santiago en bicicleta por ciclovías reales. Rutas ciclistas, botón SOS, alertas comunitarias y talleres cerca de ti.",
     type: "website",
     locale: "es_CL",
     url: "https://www.gobikeup.com",
@@ -58,9 +65,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GoBikeUp — Pedalea tranquilo por Santiago",
+    site: "@gobikeup",
+    creator: "@gobikeup",
+    title: "GoBikeUp — App ciclista para Santiago de Chile",
     description:
-      "La app de navegacion ciclista para Santiago. Rutas por ciclovias reales, SOS emergencia, alertas comunitarias y talleres cerca de ti.",
+      "Navega Santiago en bicicleta por ciclovías reales. Rutas ciclistas, botón SOS, alertas comunitarias y talleres cerca de ti.",
+  },
+  other: {
+    "geo.region": "CL-RM",
+    "geo.placename": "Santiago, Chile",
+    "geo.position": "-33.4489;-70.6693",
+    ICBM: "-33.4489, -70.6693",
   },
 }
 
@@ -70,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} antialiased`} suppressHydrationWarning>
+    <html lang="es-CL" className={`${inter.variable} antialiased`} suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"

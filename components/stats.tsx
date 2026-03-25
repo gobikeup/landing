@@ -10,8 +10,8 @@ const stats = [
     icon: Route,
     value: 6504,
     suffix: "km",
-    label: "ciclovias mapeadas",
-    srValue: "6.504 km de ciclovias mapeadas en Santiago",
+    label: "ciclovías mapeadas",
+    srValue: "6.504 km de ciclovías mapeadas en Santiago",
   },
   {
     icon: AlertTriangle,
@@ -32,7 +32,7 @@ const stats = [
     value: 131,
     suffix: "",
     label: "emergencia directa",
-    srValue: "131 numero de emergencia directa Chile",
+    srValue: "131 número de emergencia directa Chile",
   },
 ]
 
@@ -53,7 +53,7 @@ export function Stats() {
   return (
     <section id="datos" className="relative border-y border-border bg-muted">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,var(--primary)_0%,transparent_70%)] opacity-[0.10]" />
-      <h2 className="sr-only">GoBikeUp en numeros</h2>
+      <h2 className="sr-only">GoBikeUp en números</h2>
       {/* Marquee — ambient context strip arriba */}
       <div className="border-b border-border py-3">
         <Marquee pauseOnHover className="[--duration:50s] [--gap:3rem]">
