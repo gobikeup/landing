@@ -8,7 +8,7 @@ const footerLinks = {
     { label: "Waitlist", href: "#descargar" },
   ],
   Contacto: [
-    { label: "hola@gobikeup.com", href: "mailto:hola@gobikeup.com" },
+    { label: "contacto@gobikeup.com", href: "mailto:contacto@gobikeup.com" },
     { label: "Privacidad", href: "/privacidad" },
     { label: "Terminos", href: "/terminos" },
   ],

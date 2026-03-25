@@ -29,7 +29,7 @@ const jsonLd = {
       },
       contactPoint: {
         "@type": "ContactPoint",
-        email: "hola@gobikeup.com",
+        email: "contacto@gobikeup.com",
         contactType: "customer support",
         availableLanguage: "Spanish",
       },
