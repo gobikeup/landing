@@ -1,5 +1,3 @@
-@AGENTS.md
-
 # Landing Page — www.gobikeup.com
 
 ## Que es esto

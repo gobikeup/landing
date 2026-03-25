@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero"
 import { Problem } from "@/components/problem"
 import { Features } from "@/components/features"
 import { HowItWorks } from "@/components/how-it-works"
-import { Stats } from "@/components/stats"
 import { CTA } from "@/components/cta"
 import { Footer } from "@/components/footer"
 
@@ -78,7 +77,6 @@ export default function Home() {
         <Problem />
         <Features />
         <HowItWorks />
-        <Stats />
         <CTA />
       </main>
       <Footer />
