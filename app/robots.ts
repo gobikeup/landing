@@ -28,6 +28,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.gobikeup.com/sitemap.xml",
+    sitemap: "https://www.gobikeup.cl/sitemap.xml",
   }
 }

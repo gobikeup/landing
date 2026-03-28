@@ -19,7 +19,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.gobikeup.com"),
+  metadataBase: new URL("https://www.gobikeup.cl"),
   title: {
     default: "GoBikeUp — Ciclovías y Rutas Ciclistas en Santiago",
     template: "%s | GoBikeUp",
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
   authors: [{ name: "GoBikeUp" }],
   creator: "GoBikeUp",
   alternates: {
-    canonical: "https://www.gobikeup.com",
+    canonical: "https://www.gobikeup.cl",
     languages: {
-      "es-CL": "https://www.gobikeup.com",
-      "x-default": "https://www.gobikeup.com",
+      "es-CL": "https://www.gobikeup.cl",
+      "x-default": "https://www.gobikeup.cl",
     },
   },
   robots: {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       "Navega Santiago en bicicleta por ciclovías reales. Rutas ciclistas, botón SOS, alertas comunitarias y talleres cerca de ti.",
     type: "website",
     locale: "es_CL",
-    url: "https://www.gobikeup.com",
+    url: "https://www.gobikeup.cl",
     siteName: "GoBikeUp",
   },
   twitter: {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Política de Privacidad — GoBikeUp",
   description: "Política de privacidad de GoBikeUp. Cómo recolectamos, usamos y protegemos tu información personal en nuestra app de navegación ciclista para Santiago de Chile.",
   alternates: {
-    canonical: "https://www.gobikeup.com/privacidad",
+    canonical: "https://www.gobikeup.cl/privacidad",
   },
 }
 
@@ -25,7 +25,7 @@ export default function PrivacidadPage() {
           Esta Política de Privacidad para GoBikeUp (&quot;nosotros&quot;, &quot;nos&quot; o &quot;nuestro&quot;) describe cómo y por qué podemos acceder, recopilar, almacenar, usar y/o compartir (&quot;procesar&quot;) tu información personal cuando utilizas nuestros servicios (&quot;Servicios&quot;), incluyendo cuando:
         </p>
         <ul>
-          <li>Visitas nuestro sitio web en <a href="https://www.gobikeup.com">www.gobikeup.com</a>, o cualquier sitio web nuestro que enlace a esta Política de Privacidad.</li>
+          <li>Visitas nuestro sitio web en <a href="https://www.gobikeup.cl">www.gobikeup.cl</a>, o cualquier sitio web nuestro que enlace a esta Política de Privacidad.</li>
           <li>Usas GoBikeUp, una app de navegación ciclista para Santiago de Chile que ayuda a los ciclistas a encontrar las mejores rutas en la ciudad.</li>
           <li>Interactúas con nosotros de otras maneras relacionadas, incluyendo marketing o eventos.</li>
         </ul>

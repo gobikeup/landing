@@ -12,7 +12,7 @@ GoBikeUp es una aplicación móvil (iOS y Android) que resuelve los tres princip
 - Plataforma: Aplicación móvil gratuita para iOS y Android
 - Ciudad: Santiago de Chile (única ciudad soportada en v1)
 - Idioma: Español
-- Estado: Próximo lanzamiento — waitlist activa en www.gobikeup.com
+- Estado: Próximo lanzamiento — waitlist activa en www.gobikeup.cl
 - Precio: Gratuito
 
 ## Features principales
@@ -45,5 +45,5 @@ Santiago de Chile tiene una de las redes de ciclovías más extensas de Latinoam
 
 ## Contacto
 
-- Web: https://www.gobikeup.com
+- Web: https://www.gobikeup.cl
 - Email: contacto@gobikeup.com

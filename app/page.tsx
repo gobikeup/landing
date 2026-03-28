@@ -11,14 +11,14 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://www.gobikeup.com/#organization",
+      "@id": "https://www.gobikeup.cl/#organization",
       name: "GoBikeUp",
-      url: "https://www.gobikeup.com",
+      url: "https://www.gobikeup.cl",
       logo: {
         "@type": "ImageObject",
-        "@id": "https://www.gobikeup.com/#logo",
-        url: "https://www.gobikeup.com/logo.svg",
-        contentUrl: "https://www.gobikeup.com/logo.svg",
+        "@id": "https://www.gobikeup.cl/#logo",
+        url: "https://www.gobikeup.cl/logo.svg",
+        contentUrl: "https://www.gobikeup.cl/logo.svg",
         width: 512,
         height: 512,
       },
@@ -57,9 +57,9 @@ const jsonLd = {
     },
     {
       "@type": "MobileApplication",
-      "@id": "https://www.gobikeup.com/#app",
+      "@id": "https://www.gobikeup.cl/#app",
       name: "GoBikeUp",
-      url: "https://www.gobikeup.com",
+      url: "https://www.gobikeup.cl",
       operatingSystem: "iOS, Android",
       applicationCategory: "TravelApplication",
       description:
@@ -71,8 +71,8 @@ const jsonLd = {
         "Directorio de talleres de bicicleta",
         "Marketplace de servicios ciclistas",
       ],
-      author: { "@id": "https://www.gobikeup.com/#organization" },
-      publisher: { "@id": "https://www.gobikeup.com/#organization" },
+      author: { "@id": "https://www.gobikeup.cl/#organization" },
+      publisher: { "@id": "https://www.gobikeup.cl/#organization" },
       inLanguage: "es-CL",
       offers: {
         "@type": "Offer",
@@ -83,18 +83,18 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.gobikeup.com/#website",
+      "@id": "https://www.gobikeup.cl/#website",
       name: "GoBikeUp",
-      url: "https://www.gobikeup.com",
+      url: "https://www.gobikeup.cl",
       description:
         "Landing page de GoBikeUp, la app de navegación ciclista para Santiago de Chile.",
       inLanguage: "es-CL",
-      publisher: { "@id": "https://www.gobikeup.com/#organization" },
-      mainEntity: { "@id": "https://www.gobikeup.com/#app" },
+      publisher: { "@id": "https://www.gobikeup.cl/#organization" },
+      mainEntity: { "@id": "https://www.gobikeup.cl/#app" },
     },
     {
       "@type": "HowTo",
-      "@id": "https://www.gobikeup.com/#how-it-works",
+      "@id": "https://www.gobikeup.cl/#how-it-works",
       name: "Cómo usar GoBikeUp para navegar en bicicleta por Santiago",
       description:
         "Sin tutoriales, sin crear cuenta, sin configurar nada. Así de simple.",
