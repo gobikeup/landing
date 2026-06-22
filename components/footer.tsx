@@ -10,6 +10,8 @@ const footerLinks = {
   Contacto: [
     { label: "contacto@gobikeup.com", href: "mailto:contacto@gobikeup.com" },
     { label: "Privacidad", href: "/privacidad" },
+    { label: "Seguridad infantil", href: "/seguridad-infantil" },
+    { label: "Eliminar cuenta", href: "/eliminar-cuenta" },
   ],
 }
 
