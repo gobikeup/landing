@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
+      url: "https://www.gobikeup.cl/terminos",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: "https://www.gobikeup.cl/eliminar-cuenta",
       lastModified: new Date(),
       changeFrequency: "yearly",
