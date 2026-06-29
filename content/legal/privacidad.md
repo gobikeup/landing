@@ -1,6 +1,6 @@
 # Política de Privacidad — GoBikeUp
 
-**Última actualización: [FECHA DE VIGENCIA]**
+**Última actualización: 29 de junio de 2026**
 **Versión 0.3**
 
 > **Pedalea tranquilo.** Esta política te explica, en lenguaje claro, qué Datos Personales recolectamos cuando usas la App, para qué los usamos, con quién los compartimos y cómo puedes controlarlos. Léela con calma: queremos que sepas exactamente qué pasa con tu información.
@@ -400,7 +400,7 @@ Para esto, tu **historial de rutas** (origen, destino, distancia, duración, fec
 
 ### Una advertencia honesta sobre la anonimización
 
-> **[PENDIENTE DE IMPLEMENTAR Y VERIFICAR EN EL BACKEND]** — describimos aquí el método que aplicaremos. No generaremos ni compartiremos ningún dataset B2G hasta que este proceso esté implementado y verificado.
+> **Importante:** describimos aquí el método que aplicaremos. **No generaremos ni compartiremos ningún dataset B2G hasta que este proceso esté implementado y verificado.**
 
 Las **trayectorias GPS son inherentemente re-identificables**: incluso agregadas, los recorridos pueden, en ciertas condiciones, asociarse a una persona (especialmente por sus puntos de inicio y fin). Por eso somos cautos y honestos:
 

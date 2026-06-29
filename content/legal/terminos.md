@@ -1,7 +1,7 @@
 # Términos de Servicio — GoBikeUp
 
-**Última actualización: [FECHA DE VIGENCIA]**
-**Versión 0.2**
+**Última actualización: 29 de junio de 2026**
+**Versión 0.3**
 
 GoBikeUp es una aplicación móvil de GoBike SpA. Estos Términos de Servicio (los "Términos") regulan tu acceso y uso de la aplicación GoBikeUp para iOS y Android (la "App"). Léelos con atención antes de aceptarlos.
 
@@ -227,4 +227,4 @@ Si descargaste la App desde la App Store, además de lo anterior aplica lo sigui
 
 ---
 
-*GoBike SpA — RUT 78.427.191-9 — Avda. Vitacura 5480 of. 38, Vitacura, Santiago, Chile. Contacto: contacto@gobikeup.com — gobikeup.cl. Representante legal: Sebastián Torres Erazo. Versión 0.2 — Última actualización: [FECHA DE VIGENCIA].*
+*GoBike SpA — RUT 78.427.191-9 — Avda. Vitacura 5480 of. 38, Vitacura, Santiago, Chile. Contacto: contacto@gobikeup.com — gobikeup.cl. Representante legal: Sebastián Torres Erazo. Versión 0.3 — Última actualización: 29 de junio de 2026.*
