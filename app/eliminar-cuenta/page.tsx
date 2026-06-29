@@ -48,8 +48,10 @@ export default function EliminarCuentaPage() {
           procesaremos la eliminación de tu cuenta y de tus datos.
         </p>
         <p>
-          Cierta información puede conservarse de forma anonimizada o por el
-          período que la ley o la seguridad lo exijan.
+          Al confirmar la eliminación, tus datos personales se eliminan de forma
+          permanente de nuestros sistemas, salvo la información puntual que la
+          ley nos obligue a conservar (ver nuestra{" "}
+          <Link href="/privacidad">Política de Privacidad</Link>).
         </p>
       </article>
     </main>

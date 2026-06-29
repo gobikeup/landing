@@ -443,11 +443,11 @@ Por regla general, conservamos tus Datos Personales **mientras exista tu cuenta*
 | Datos de postulación GoBikeTalleres (B2B) | Mientras dure la evaluación / la relación; en caso contrario, plazo razonable | Se eliminan o anonimizan al vencer el plazo |
 | Búsquedas recientes de direcciones (on-device) | En tu dispositivo (`AsyncStorage`), hasta que limpies los datos de la App | No salen del dispositivo; las controlas tú |
 | Texto de búsqueda de direcciones (geocoding) | No lo almacenamos de forma persistente en el backend; se procesa para responder tu consulta | El proveedor de geocoding puede conservar logs según su propia política |
-| IP del cliente y logs de infraestructura | **Plazo corto** [POR CONFIRMAR] | Se eliminan automáticamente al vencer el plazo |
-| Telemetría y errores (depurada, en Sentry) | Plazo de retención de Sentry [POR CONFIRMAR] | Se eliminan según la política de Sentry |
+| IP del cliente y logs de infraestructura | **90 días** | Se eliminan automáticamente al vencer el plazo |
+| Telemetría y errores (depurada, en Sentry) | **90 días** | Se eliminan automáticamente al vencer el plazo |
 | Datos agregados (modelo B2G) | Según su naturaleza y el resultado de la anonimización (ver Sección 13) | Mientras sigan siendo Datos Personales, se rigen por esta política |
 
-> **Plazos finos por confirmar.** Algunos plazos cortos (IP, logs, telemetría) están **[POR CONFIRMAR]** y se precisarán en la versión definitiva. Cuando la ley nos obligue a conservar un dato por un plazo mayor (por ejemplo, para responder a una autoridad o defender un derecho), lo conservaremos solo durante ese plazo legal y luego lo eliminaremos.
+> **Conservación limitada.** Cuando la ley nos obligue a conservar un dato por un plazo mayor (por ejemplo, para responder a una autoridad o defender un derecho), lo conservaremos solo durante ese plazo legal y luego lo eliminaremos.
 
 Una vez eliminados, los Datos Personales pueden permanecer por un período breve en respaldos cifrados antes de su sobrescritura definitiva, sin que sean usados para ninguna otra finalidad.
 
@@ -516,22 +516,19 @@ Si en lugar de borrar la cuenta solo quieres **cerrar sesión** o **dejar de usa
 
 ## 17. Menores de edad (niños, niñas y adolescentes)
 
-La App está pensada para personas de **14 años o más**. **No admitimos el registro de menores de 14 años.**
+La App está pensada para personas de **16 años o más**. **No admitimos el registro de menores de 16 años.**
 
 ### Cómo verificamos la edad
 
-Al registrarte, te pedimos **confirmar mediante una casilla** que tienes **al menos 14 años** ("Confirmo que tengo al menos 14 años"). Es una **declaración tuya**: la App **no** recolecta tu fecha ni tu año de nacimiento, y no guardamos ningún dato de edad. La verificación de la edad mínima se basa únicamente en esa **autodeclaración**. Si detectamos una cuenta de un menor de 14 años, la eliminaremos junto con sus datos.
+Al registrarte, te pedimos **confirmar mediante una casilla** que tienes **al menos 16 años** ("Confirmo que tengo al menos 16 años"). Es una **declaración tuya**: la App **no** recolecta tu fecha ni tu año de nacimiento, y no guardamos ningún dato de edad. La verificación de la edad mínima se basa únicamente en esa **autodeclaración**. Si detectamos una cuenta de un menor de 16 años, la eliminaremos junto con sus datos.
 
-### Adolescentes menores de 16 años
+### Por qué la edad mínima es 16 años
 
-La Ley N° 21.719 establece una protección reforzada para adolescentes **menores de 16 años**. En particular, conforme al **artículo 16 quáter, inciso cuarto**, el tratamiento de **datos personales sensibles** de un adolescente menor de 16 años **requiere, de forma imperativa, el consentimiento del padre, madre o representante legal**.
+La Ley N° 21.719 establece una protección reforzada para adolescentes **menores de 16 años**: conforme al **artículo 16 quáter, inciso cuarto**, el tratamiento de **datos personales sensibles** de un adolescente menor de 16 años **requiere el consentimiento del padre, madre o representante legal**.
 
-En GoBikeUp esto es directamente relevante, porque la App trata datos de **ubicación** y opera una función de **emergencia (SOS)**. Por ello, nos comprometemos a:
+Como GoBikeUp trata datos de **ubicación** y opera una función de **emergencia (SOS)** que puede involucrar datos sensibles, hemos fijado la **edad mínima de uso en 16 años**. De este modo, no tratamos datos sensibles de adolescentes menores de 16 que requieran el consentimiento de su representante legal.
 
-- **No tratar datos sensibles** de un adolescente menor de 16 años sin el **consentimiento de su representante legal**.
-- Disponer de un **mecanismo** para recabar y acreditar dicho consentimiento cuando corresponda, y para que un representante legal pueda solicitarnos la **supresión** de los datos de un menor a su cargo.
-
-Si eres **padre, madre o representante legal** y crees que un menor a tu cargo nos ha entregado Datos Personales sin la autorización correspondiente, escríbenos a **contacto@gobikeup.com** y los eliminaremos.
+Si eres **padre, madre o representante legal** y crees que un menor de 16 años a tu cargo creó una cuenta declarando una edad falsa, escríbenos a **contacto@gobikeup.com** y eliminaremos la cuenta y sus datos.
 
 ### Una recomendación honesta
 

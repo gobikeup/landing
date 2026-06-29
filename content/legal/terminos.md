@@ -71,9 +71,9 @@ El botón **SOS** de la App es solo una **ayuda complementaria**: cuando lo acti
 
 ## 3. Tu cuenta y elegibilidad
 
-**Edad mínima.** Para crear una cuenta debes tener al menos **14 años**. Al registrarte declaras, bajo tu responsabilidad, que cumples con esta edad mínima.
+**Edad mínima.** Para crear una cuenta debes tener al menos **16 años**. Al registrarte declaras, bajo tu responsabilidad, que cumples con esta edad mínima.
 
-**Adolescentes y autorización del representante legal.** Si tienes entre 14 y 18 años puedes usar la App, pero **si eres menor de 16 años necesitas la autorización de tu padre, madre o representante legal** para usar funciones que tratan **datos sensibles**, como el SOS y el compartir tu ubicación. Al usar esas funciones declaras que cuentas con dicha autorización cuando corresponda. El tratamiento de datos de adolescentes se rige por la **Política de Privacidad**.
+**Por qué 16 años.** Fijamos la edad mínima en **16 años** porque la App trata datos de ubicación y opera una función de emergencia (SOS) que puede involucrar datos personales sensibles; bajo la **Ley N° 21.719 (art. 16 quáter)**, el tratamiento de datos sensibles de menores de 16 años requeriría el consentimiento del representante legal. Al fijar el mínimo en 16 evitamos ese supuesto. El tratamiento de tus datos se rige por la **Política de Privacidad**.
 
 **Datos veraces.** Te comprometes a entregar información veraz, exacta y actualizada al crear y mantener tu cuenta.
 

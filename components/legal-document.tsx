@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import rehypeSlug from "rehype-slug"
+import { PrintButton } from "@/components/print-button"
 
 /**
  * Renderiza un documento legal escrito en Markdown (con tablas GFM) como una
@@ -14,13 +15,16 @@ import rehypeSlug from "rehype-slug"
 export function LegalDocument({ content }: { content: string }) {
   return (
     <main className="mx-auto max-w-3xl px-6 py-24 lg:py-32">
-      <Link
-        href="/"
-        className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        Volver al inicio
-      </Link>
+      <div className="no-print mb-8 flex items-center justify-between gap-4">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Volver al inicio
+        </Link>
+        <PrintButton />
+      </div>
       <article
         className="
           prose prose-neutral max-w-none text-foreground

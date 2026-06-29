@@ -169,3 +169,40 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Copia imprimible / PDF de las paginas legales (Ley N° 19.496):
+   contrato de adhesion que el consumidor debe poder almacenar e imprimir
+   de forma completa y legible. */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  main {
+    padding: 1rem 0 !important;
+    max-width: none !important;
+  }
+  /* Texto a tinta legible sobre papel blanco */
+  article.prose :where(*) {
+    color: #111 !important;
+  }
+  /* Las tablas anchas no deben recortarse al imprimir: mostrar completas */
+  article.prose .overflow-x-auto {
+    overflow: visible !important;
+  }
+  article.prose table {
+    font-size: 10px;
+  }
+  /* Evitar cortes feos entre paginas */
+  article.prose tr,
+  article.prose blockquote,
+  article.prose h1,
+  article.prose h2,
+  article.prose h3 {
+    break-inside: avoid;
+  }
+  article.prose h1,
+  article.prose h2,
+  article.prose h3 {
+    break-after: avoid;
+  }
+}
