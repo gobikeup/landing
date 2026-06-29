@@ -104,7 +104,6 @@ Recolectamos únicamente los Datos Personales necesarios para que la App funcion
 | **Texto de búsqueda de direcciones** | Lo que escribes para buscar una dirección (puede contener tu domicilio) | Convertir la dirección en coordenadas (geocoding) | **Google Geocoding (EE.UU.)** — proveedor en producción; la consulta viaja vía nuestro backend (Hetzner, UE) | Sí |
 | **Dirección IP** | IP de tu conexión | Seguridad, prevención de abuso, enrutamiento y entrega del servicio | Cloudflare (proxy/WAF, global), Hetzner (UE), OpenFreeMap | Sí |
 | **Telemetría de errores (backend)** | Stack traces, breadcrumbs y contexto técnico de los errores que ocurren en **nuestro servidor** (no en tu dispositivo) | Detectar y corregir fallas, mejorar estabilidad (ver Sección 12). La App no envía telemetría; se procesa **server-side** y se depura (*scrub*) para no incluir Datos Personales | GoBike SpA — Hetzner (UE); telemetría depurada en Sentry (EE.UU.) | No (no se recolecta de tu dispositivo) |
-| **Fotos** (futuro) | Imágenes que pudieras subir asociadas a contenido | Almacenar y servir las imágenes del contenido | Cloudflare R2 (object storage, custom domain `uploads.gobikeup.cl`) | Según función |
 | **Tiles del mapa** | Solicitudes de fragmentos del mapa (revelan la zona que exploras) | Renderizar el mapa | OpenFreeMap | Sí |
 | **Permisos del sistema** | Acceso a ubicación (incluido segundo plano) y a notificaciones | Obtener tu ubicación y enviarte notificaciones según se describe arriba | En tu dispositivo (sistema operativo) | Sí |
 
@@ -326,7 +325,6 @@ Queremos ser honestos contigo: **algunos de estos proveedores están fuera de Ch
 |---|---|---|---|
 | **Hetzner** | Cuenta (nombre, correo, UUID, `systemRole`, teléfono y tipo de bici si los agregas), contraseña (hash), historial de rutas (incluida la trayectoria), estadísticas personales, historial de eventos SOS, contactos de emergencia, alertas, reviews, interacciones con talleres, datos de postulación B2B, IP del cliente | Unión Europea (Alemania) | Hosting de la App y base de datos principal donde vive tu información |
 | **Cloudflare** | IP del cliente, tráfico de la App | Estados Unidos / red global | Proxy y firewall (WAF) que protege la App frente a ataques |
-| **Cloudflare R2** | Imágenes que pudieras subir asociadas a contenido (object storage; `uploads.gobikeup.cl`) | Estados Unidos / red global | Almacenamiento y entrega de fotos |
 | **Twilio** | Ubicación del SOS, estado del evento, nombre y teléfono (E.164) de tus contactos de emergencia | Estados Unidos | Envío del SMS de emergencia (SOS) a tus contactos (ver Sección 6) |
 | **Expo / Google FCM / Apple APNs** | Token de notificación y contenido del aviso push | Estados Unidos | Entrega de notificaciones push a tu teléfono (ver Sección 8) |
 | **Resend** | Nombre, correo y datos de la postulación GoBikeTalleres incluidos en el correo transaccional | Estados Unidos | Envío de correos transaccionales (postulaciones B2B, ver Sección 9) |
@@ -499,7 +497,7 @@ Al confirmar el borrado, la App ejecuta una **purga real** de tu cuenta: **elimi
 - Tu **historial de rutas** (incluida la trayectoria/polilínea de tus recorridos), tus **estadísticas personales** y tu **historial de eventos SOS**.
 - Tus **contactos de emergencia**.
 - Tus **reviews**, tus **interacciones con talleres** y el contenido atribuido a tu perfil; tus **alertas comunitarias** públicas se eliminan o se **anonimizan/desvinculan** de tu identidad.
-- Tu **token de notificaciones push** y cualquier imagen tuya almacenada (si la hubiera).
+- Tu **token de notificaciones push**.
 - La **revocación de tus tokens** de sesión y el borrado de los datos cacheados en tu dispositivo (`expo-secure-store`).
 
 ### Excepciones reales
