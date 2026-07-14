@@ -1,7 +1,7 @@
 # Política de Privacidad — GoBikeUp
 
-**Última actualización: 29 de junio de 2026**
-**Versión 0.3**
+**Última actualización: 14 de julio de 2026**
+**Versión 0.4**
 
 > **Pedalea tranquilo.** Esta política te explica, en lenguaje claro, qué Datos Personales recolectamos cuando usas la App, para qué los usamos, con quién los compartimos y cómo puedes controlarlos. Léela con calma: queremos que sepas exactamente qué pasa con tu información.
 
@@ -84,26 +84,27 @@ Recolectamos únicamente los Datos Personales necesarios para que la App funcion
 | Categoría de dato | Qué incluye | Para qué lo usamos (finalidad) | Quién lo procesa / dónde | ¿Aplica a invitado? |
 |---|---|---|---|---|
 | **Datos de cuenta** | Nombre, correo electrónico, UUID interno, `systemRole` | Crear y administrar tu cuenta, autenticarte | GoBike SpA — Hetzner (UE). Caché on-device en `expo-secure-store` | No (solo registrado) |
-| **Teléfono del usuario** (opcional) | Tu número de teléfono, si decides agregarlo en los ajustes de tu perfil | Mostrarlo en tu perfil. Es distinto de los teléfonos de tus contactos de emergencia | GoBike SpA — Hetzner (UE). *Editable solo en iOS; en Android se muestra como solo lectura* | No |
+| **Teléfono del usuario** (opcional) | Tu número de teléfono, si decides agregarlo en los ajustes de tu perfil | Mostrarlo en tu perfil **y mostrárselo a tu contacto de emergencia (con opción de llamarte) en el panel de seguimiento mientras un SOS está activo**. Es distinto de los teléfonos de tus contactos de emergencia | GoBike SpA — Hetzner (UE). *Editable solo en iOS; en Android se muestra como solo lectura* | No |
 | **Tipo de bicicleta** (opcional) | La categoría de bici que eliges en los ajustes | Personalizar tu perfil | GoBike SpA — Hetzner (UE) | No |
 | **Contraseña** | Hash `bcrypt` de tu contraseña | Autenticación segura. Nunca se guarda en el dispositivo ni se registra en logs | GoBike SpA — Hetzner (UE) | No |
 | **Tokens de sesión** | Token de acceso (JWT) y token de refresco | Mantener tu sesión iniciada sin volver a pedirte la contraseña. Nunca se registran en logs | En tu dispositivo (`expo-secure-store` / Keychain–Keystore) | No |
 | **Identificador del dispositivo (`device-id`)** | Identificador **persistente** derivado del IDFV (iOS) o del ANDROID_ID (Android), guardado en `expo-secure-store` | (1) Prevención de abuso y límites de uso (*rate limiting*); (2) **analítica de uso y retención** (métricas agregadas de actividad diaria/mensual, p. ej. DAU/MAU). No lo usamos para atribuir contenido, porque crear contenido requiere cuenta. Se purga (ver Sección 14) | GoBike SpA — Hetzner (UE) | Sí |
 | **Token de notificaciones push** | Token de notificación de Expo y estado del permiso de notificaciones | Enviarte avisos relevantes de la App (ver Sección 8) | GoBike SpA — Hetzner (UE); Expo, Google FCM y Apple APNs (EE.UU.) | Sí (si concedes el permiso) |
 | **Geolocalización en primer plano** | GPS en vivo mientras usas la App | Navegación paso a paso, recentrar el mapa, mostrar alertas y talleres cercanos, geocoding | Backend GoBike SpA — Hetzner (UE) | Sí |
-| **Geolocalización en segundo plano** | Stream de ubicación cada 5 s, hasta 30 min | **Único uso:** compartir tu recorrido en vivo con tu contacto durante un SOS activo (ver Sección 6) | GoBike SpA — Hetzner (UE); panel `admin.gobikeup.cl/sos/{token}`. Se borra a los 90 días | Sí (si activas un SOS) |
-| **Ubicación puntual del SOS** | Coordenadas al disparar y al cancelar + estado del evento (`active`/`cancelled`/`expired`/`im_ok`/`false_alarm`) | Avisar tu ubicación a tus contactos de emergencia | GoBike SpA — Hetzner (UE); enviada por SMS vía Twilio (EE.UU.) | Sí (si activas un SOS) |
+| **Geolocalización en segundo plano** | Stream de ubicación cada 5 s, hasta 30 min | **Único uso:** compartir tu recorrido en vivo con tu contacto durante un SOS activo (ver Sección 6) | GoBike SpA — Hetzner (UE); panel `admin.gobikeup.cl/track/{token}`. Se borra a los 90 días | No — requiere cuenta |
+| **Ubicación puntual del SOS** | Coordenadas al disparar y al cancelar + estado del evento (`active`/`cancelled`/`expired`/`im_ok`/`false_alarm`) | Avisar tu ubicación a tus contactos de emergencia | GoBike SpA — Hetzner (UE); la coordenada de **activación** se envía por WhatsApp vía WhatsApp LLC (EE.UU.); la de **cancelación** solo se registra internamente | No — requiere cuenta |
 | **Historial de rutas (incluida la trayectoria)** | Origen, destino, etiquetas, distancia, duración, fecha y la **trayectoria completa (polilínea) del recorrido** que registramos mientras navegas | Permitirte re-navegar rutas, mostrarte tu última ruta y, **solo de forma agregada**, alimentar métricas de uso de ciclovías (ver Sección 13). Puede revelar tu domicilio o trabajo | GoBike SpA — Hetzner (UE) | No |
 | **Estadísticas personales de actividad** | Cifras derivadas de tu uso: kilómetros totales, horas totales, número de rutas, alertas reportadas, CO₂ ahorrado estimado y fecha de ingreso | Mostrarte tu actividad en tu perfil | GoBike SpA — Hetzner (UE) | No |
 | **Historial de eventos SOS** | Registro de tus SOS pasados y su estado | Mostrarte tu historial y dar seguimiento a emergencias | GoBike SpA — Hetzner (UE) | No |
 | **Alertas comunitarias** | **Tipo** de alerta (bache, robo, obra, sin luz, perro, vía cortada, etc.) y **ubicación GPS** del incidente | Mostrar alertas comunitarias en el mapa a otros ciclistas (sin foto) | GoBike SpA — Hetzner (UE). Atribuidas a tu cuenta | No (crear requiere cuenta) |
-| **Contactos de emergencia (terceros)** | Nombre, teléfono (E.164) y relación del contacto | Notificarles por SMS cuando actives un SOS | GoBike SpA — Hetzner (UE); enviados a Twilio (EE.UU.) | No (requiere cuenta) |
+| **Contactos de emergencia (terceros)** | Nombre, teléfono (E.164) y relación del contacto | Notificarles por WhatsApp cuando actives un SOS | GoBike SpA — Hetzner (UE); el teléfono se envía a WhatsApp LLC (EE.UU.) como destinatario del mensaje | No (requiere cuenta) |
 | **Reviews de talleres** | Texto de la reseña, calificación y tu **nombre** (se muestra públicamente junto a la reseña) | Publicar tu reseña (contenido público atribuido a tu perfil) | GoBike SpA — Hetzner (UE) | No (requiere cuenta) |
 | **Interacciones con talleres (analítica propia)** | Eventos por taller: ver ficha, tocar llamar, tocar WhatsApp, tocar navegar | Entender qué talleres se usan y cómo, para mejorar el producto (analítica de producto **propia**, no de terceros) | GoBike SpA — Hetzner (UE) | Sí |
 | **Datos de postulación GoBikeTalleres (B2B)** | Nombre de contacto, correo, teléfono, dirección, coordenadas (lat/lng), motivación y origen de la referencia del taller postulante | Recibir y gestionar postulaciones de talleres a la plataforma (ver Sección 9) | GoBike SpA — Hetzner (UE); correo transaccional vía Resend (EE.UU.) | Sí (formulario abierto) |
 | **Texto de búsqueda de direcciones** | Lo que escribes para buscar una dirección (puede contener tu domicilio) | Convertir la dirección en coordenadas (geocoding) | **Google Geocoding (EE.UU.)** — proveedor en producción; la consulta viaja vía nuestro backend (Hetzner, UE) | Sí |
 | **Dirección IP** | IP de tu conexión | Seguridad, prevención de abuso, enrutamiento y entrega del servicio | Cloudflare (proxy/WAF, global), Hetzner (UE), OpenFreeMap | Sí |
 | **Telemetría de errores (backend)** | Stack traces, breadcrumbs y contexto técnico de los errores que ocurren en **nuestro servidor** (no en tu dispositivo) | Detectar y corregir fallas, mejorar estabilidad (ver Sección 12). La App no envía telemetría; se procesa **server-side** y se depura (*scrub*) para no incluir Datos Personales | GoBike SpA — Hetzner (UE); telemetría depurada en Sentry (EE.UU.) | No (no se recolecta de tu dispositivo) |
+| **Fotos** (futuro) | Imágenes que pudieras subir asociadas a contenido | Almacenar y servir las imágenes del contenido | Cloudflare R2 (object storage, custom domain `uploads.gobikeup.cl`) | Según función |
 | **Tiles del mapa** | Solicitudes de fragmentos del mapa (revelan la zona que exploras) | Renderizar el mapa | OpenFreeMap | Sí |
 | **Permisos del sistema** | Acceso a ubicación (incluido segundo plano) y a notificaciones | Obtener tu ubicación y enviarte notificaciones según se describe arriba | En tu dispositivo (sistema operativo) | Sí |
 
@@ -168,7 +169,7 @@ GoBikeUp solicita el permiso de **ubicación en segundo plano** del sistema (en 
 
 Cuando activas un SOS, y solo mientras ese SOS está activo, la App transmite tu ubicación en segundo plano (un punto cada 5 segundos, hasta un máximo de 30 minutos) para que tu contacto de emergencia pueda seguir tu recorrido en vivo. Fuera de un SOS activo, la App **no** recopila tu ubicación en segundo plano. El detalle completo del SOS está en la Sección 6.
 
-**Aviso destacado (prominent disclosure).** Antes de habilitar este permiso te mostramos un aviso claro explicando que la ubicación en segundo plano se usa exclusivamente para compartir tu recorrido con tu contacto de emergencia durante un SOS. El permiso es **opcional**: puedes usar el resto de la App sin concederlo, aunque en ese caso el seguimiento en vivo durante un SOS no estará disponible (sí se enviará tu ubicación puntual por SMS al disparar y cancelar la emergencia).
+**Aviso destacado (prominent disclosure).** Antes de habilitar este permiso te mostramos un aviso claro explicando que la ubicación en segundo plano se usa exclusivamente para compartir tu recorrido con tu contacto de emergencia durante un SOS. El permiso es **opcional**: puedes usar el resto de la App sin concederlo, aunque en ese caso el seguimiento en vivo durante un SOS no estará disponible (sí se enviará por WhatsApp tu ubicación del momento de **activación**; la coordenada de cancelación solo se registra internamente y no se envía a tus contactos).
 
 **Base de licitud:** tu **consentimiento explícito** al conceder el permiso (art. 12). Cuando el tratamiento involucre datos sensibles en el contexto de la emergencia, se ampara además en el **interés vital** del titular o de un tercero (art. 16 c) (ver Sección 4).
 
@@ -201,12 +202,13 @@ Al disparar un SOS:
 
 ### 6.2 Cómo avisamos a tus contactos
 
-- **SMS vía Twilio:** enviamos un mensaje de texto a tus contactos de emergencia a través de **Twilio** (proveedor ubicado en **Estados Unidos**). El SMS incluye tu aviso de emergencia y un enlace.
-- **Dashboard de seguimiento:** el enlace abre un panel web (`admin.gobikeup.cl/sos/{token}`) con un **token único** asociado a esa emergencia, donde tu contacto puede ver tu ubicación y recorrido mientras el SOS está activo. El token vincula el acceso a ese evento específico; el seguimiento deja de actualizarse cuando el SOS finaliza.
+- **Mensaje de WhatsApp vía Meta:** enviamos un mensaje de WhatsApp a tus contactos de emergencia a través de la **WhatsApp Business Platform**, operada por **WhatsApp LLC** (empresa del grupo Meta, ubicada en **Estados Unidos**). El mensaje incluye tu **nombre**, tu **última ubicación conocida** (un mapa con las coordenadas del momento en que activaste el SOS y una dirección obtenida por geocodificación inversa, que puede incluir calle y número y puede ser inexacta), el aviso de emergencia y un **botón** con el enlace al seguimiento en vivo.
+- **Dashboard de seguimiento:** el enlace abre un panel web (`admin.gobikeup.cl/track/{token}`) con un **token único** asociado a esa emergencia, donde tu contacto puede ver **tu nombre, tu teléfono (si lo agregaste a tu perfil, con opción de llamarte), tu ubicación y tu recorrido** mientras el SOS está activo. Cuando el SOS finaliza (lo resuelves, lo cancelas o expira), **el enlace deja de mostrar tu ubicación y tu teléfono** — solo informa que la emergencia terminó.
+- **Estado de entrega:** registramos el estado de cada notificación (enviada, entregada, leída o fallida) según nos informa WhatsApp, junto con sus metadatos técnicos (identificador del mensaje asignado por WhatsApp, canal, intentos, detalle de error y fechas), con fines de diagnóstico y auditoría de la emergencia. Estos registros permiten que la App pueda informarte el resultado de las notificaciones (funcionalidad en incorporación progresiva).
 
 ### 6.3 Datos de tus contactos de emergencia (terceros)
 
-Para usar el SOS guardamos los datos de las personas que designas como contactos de emergencia: **nombre**, **teléfono** (en formato internacional E.164, p. ej. `+56912345678`) y **relación** contigo. Estos datos se transmiten a **Twilio** (Estados Unidos) para el envío del SMS.
+Para usar el SOS guardamos los datos de las personas que designas como contactos de emergencia: **nombre**, **teléfono** (en formato internacional E.164, p. ej. `+56912345678`) y **relación** contigo. El **teléfono** se transmite a **WhatsApp LLC** (Estados Unidos) como destinatario del mensaje de WhatsApp; el nombre y la relación del contacto **no** se envían a WhatsApp/Meta.
 
 Como estos son datos de **otra persona**, te pedimos lo siguiente:
 
@@ -223,6 +225,7 @@ Queremos ser categóricos en esto:
 ### 6.5 Retención y base de licitud
 
 - **Ubicación del SOS (puntual y de seguimiento):** se conserva **90 días** y luego se elimina de forma automática.
+- **Registros de notificación** (a qué contacto se envió el mensaje, su teléfono, el estado de entrega y los metadatos técnicos: identificador del mensaje de WhatsApp, canal, intentos, errores y fechas): se conservan **90 días** y luego se eliminan de forma automática, junto con la ubicación del evento.
 - **Historial de eventos SOS** (que disparaste una emergencia, su estado y hora): se conserva mientras exista tu cuenta y se elimina al borrarla (ver Secciones 14 y 16).
 - **Base de licitud:** tu **consentimiento explícito** al activar la función y al designar contactos (art. 12) y, cuando entren en juego datos sensibles durante la emergencia, el **interés vital** de proteger tu vida e integridad y la de terceros (art. 16 c) (ver Sección 4).
 
@@ -313,19 +316,20 @@ La App guarda en tu dispositivo lo necesario para funcionar. Algunos datos van a
 
 ---
 
-## 11. Con quién compartimos tus datos (Encargados) y transferencias internacionales
+## 11. Con quién compartimos tus datos (Encargados y otros destinatarios) y transferencias internacionales
 
 Para que la App funcione, GoBike SpA se apoya en proveedores de tecnología que actúan como **Encargados**: terceros que procesan Datos Personales **por cuenta y bajo instrucciones nuestras**, conforme a un contrato de tratamiento que los obliga a mantener confidencialidad, aplicar medidas de seguridad y usar los datos solo para la finalidad contratada.
 
 Queremos ser honestos contigo: **algunos de estos proveedores están fuera de Chile** y, al usarlos, tus Datos Personales se transfieren a otros países (principalmente Estados Unidos y la Unión Europea). No vendemos tus Datos Personales a nadie. Tampoco los compartimos con terceros para fines publicitarios.
 
-### Encargados que procesan tus datos
+### Encargados y otros destinatarios que procesan tus datos
 
 | Encargado | Qué dato recibe | País / Región | Finalidad |
 |---|---|---|---|
 | **Hetzner** | Cuenta (nombre, correo, UUID, `systemRole`, teléfono y tipo de bici si los agregas), contraseña (hash), historial de rutas (incluida la trayectoria), estadísticas personales, historial de eventos SOS, contactos de emergencia, alertas, reviews, interacciones con talleres, datos de postulación B2B, IP del cliente | Unión Europea (Alemania) | Hosting de la App y base de datos principal donde vive tu información |
 | **Cloudflare** | IP del cliente, tráfico de la App | Estados Unidos / red global | Proxy y firewall (WAF) que protege la App frente a ataques |
-| **Twilio** | Ubicación del SOS, estado del evento, nombre y teléfono (E.164) de tus contactos de emergencia | Estados Unidos | Envío del SMS de emergencia (SOS) a tus contactos (ver Sección 6) |
+| **Cloudflare R2** | Imágenes que pudieras subir asociadas a contenido (object storage; `uploads.gobikeup.cl`) | Estados Unidos / red global | Almacenamiento y entrega de fotos |
+| **WhatsApp LLC (WhatsApp Business Platform, grupo Meta)** | Teléfono (E.164) de tus contactos de emergencia (destinatarios), tu nombre, las coordenadas exactas y la dirección obtenida por geocodificación inversa del SOS (para el mapa del mensaje) y el token de seguimiento (en el enlace del botón) | Estados Unidos | Envío del mensaje de WhatsApp de emergencia (SOS) a tus contactos y reporte de su estado de entrega (ver Sección 6). Los datos de contacto se rigen por su acuerdo de procesamiento de datos; el contenido del mensaje, por los términos de la WhatsApp Business Platform. El plazo de retención de 90 días aplica a **nuestros** sistemas: la copia del mensaje entregada en el chat de tu contacto queda en WhatsApp y en su dispositivo, fuera de nuestro control |
 | **Expo / Google FCM / Apple APNs** | Token de notificación y contenido del aviso push | Estados Unidos | Entrega de notificaciones push a tu teléfono (ver Sección 8) |
 | **Resend** | Nombre, correo y datos de la postulación GoBikeTalleres incluidos en el correo transaccional | Estados Unidos | Envío de correos transaccionales (postulaciones B2B, ver Sección 9) |
 | **Google (Geocoding)** | Texto de búsqueda de direcciones (puede contener tu domicilio), coordenadas de consulta | Estados Unidos | Convertir direcciones en coordenadas (geocoding). **Proveedor activo en producción** |
@@ -344,7 +348,7 @@ Los mecanismos de transferencia que contempla la ley chilena incluyen, entre otr
 - **Niveles adecuados de protección** declarados respecto del país u organización de destino por la **Agencia de Protección de Datos Personales**.
 - **Cláusulas tipo** de protección de datos que dicte la propia Agencia, incorporadas a los contratos con cada Encargado, junto con sus compromisos de seguridad y confidencialidad.
 
-> **Nota honesta:** la **Agencia de Protección de Datos Personales aún no está operativa**, por lo que todavía no existen niveles de adecuación declarados ni cláusulas tipo oficiales emitidas por ella. Mientras tanto, sustentamos las transferencias en los contratos de tratamiento con cada Encargado y en sus medidas de seguridad y confidencialidad, y adoptaremos las cláusulas tipo o adecuaciones que la Agencia dicte una vez que entre en funciones.
+> **Nota honesta:** la **Agencia de Protección de Datos Personales aún no está operativa** (entra en funciones el 1 de diciembre de 2026), por lo que todavía no existen niveles de adecuación declarados por ella. Sí existen, desde diciembre de 2025, **cláusulas contractuales modelo interinas** aprobadas por la Subsecretaría de Economía (publicadas en el Diario Oficial el 19 de diciembre de 2025), vigentes hasta que la Agencia ejerza su potestad del artículo 28. Estamos incorporando esos instrumentos con nuestros proveedores internacionales; mientras tanto, sustentamos las transferencias en los contratos de tratamiento con cada proveedor y en sus medidas de seguridad y confidencialidad, y adoptaremos las cláusulas o adecuaciones que la Agencia dicte una vez que entre en funciones.
 
 Si un Encargado cambia o se suma uno nuevo, actualizaremos esta sección y, cuando corresponda, te lo informaremos (ver Sección 20).
 
@@ -433,7 +437,7 @@ Por regla general, conservamos tus Datos Personales **mientras exista tu cuenta*
 | Estadísticas personales de actividad | Mientras exista tu cuenta | Se eliminan al borrar la cuenta |
 | Historial de eventos SOS | Mientras exista tu cuenta, con el tope de 90 días de la fila siguiente para los datos de ubicación | Se elimina al borrar la cuenta |
 | Ubicación en vivo durante un SOS (stream de segundo plano) | **90 días**, con borrado automático | Se elimina automáticamente al cumplirse el plazo, aunque tu cuenta siga activa |
-| Ubicación puntual del SOS (disparo/cancelación) y estado del evento | **90 días**, con borrado automático | Se elimina automáticamente al cumplirse el plazo |
+| Ubicación puntual del SOS (disparo/cancelación), token de seguimiento y registros de notificación | **90 días**, con borrado automático | Se eliminan automáticamente al cumplirse el plazo. El **historial del evento** (que hubo un SOS, su estado y hora, ya sin ubicación) se conserva mientras exista tu cuenta |
 | Contactos de emergencia (nombre, teléfono E.164, relación) | Mientras los mantengas en tu cuenta | Se eliminan al borrarlos o al borrar la cuenta |
 | Alertas comunitarias (tipo, ubicación) | Como contenido comunitario público, mientras sean vigentes | Se eliminan o anonimizan al borrar la cuenta o al moderarse |
 | Reviews de talleres (UGC público) | Mientras exista tu cuenta | Se eliminan o se desvinculan de tu perfil al borrar la cuenta |
@@ -481,7 +485,7 @@ La revocación **no afecta** la licitud del tratamiento realizado antes de revoc
 
 ### Reclamo ante la autoridad
 
-Si consideras que no respetamos tus derechos, puedes presentar un reclamo ante la **Agencia de Protección de Datos Personales** (organismo creado por la Ley N° 21.719), sin perjuicio de las acciones que la ley te reconozca ante los tribunales.
+Si consideras que no respetamos tus derechos, **a partir del 1 de diciembre de 2026** podrás presentar un reclamo ante la **Agencia de Protección de Datos Personales** (organismo creado por la Ley N° 21.719, cuya entrada en funciones está fijada para esa fecha). Mientras tanto, puedes ejercer las acciones que la ley vigente te reconoce ante los tribunales de justicia, además de contactarnos directamente.
 
 ---
 
@@ -497,7 +501,7 @@ Al confirmar el borrado, la App ejecuta una **purga real** de tu cuenta: **elimi
 - Tu **historial de rutas** (incluida la trayectoria/polilínea de tus recorridos), tus **estadísticas personales** y tu **historial de eventos SOS**.
 - Tus **contactos de emergencia**.
 - Tus **reviews**, tus **interacciones con talleres** y el contenido atribuido a tu perfil; tus **alertas comunitarias** públicas se eliminan o se **anonimizan/desvinculan** de tu identidad.
-- Tu **token de notificaciones push**.
+- Tu **token de notificaciones push** y cualquier imagen tuya almacenada (si la hubiera).
 - La **revocación de tus tokens** de sesión y el borrado de los datos cacheados en tu dispositivo (`expo-secure-store`).
 
 ### Excepciones reales

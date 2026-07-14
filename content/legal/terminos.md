@@ -1,7 +1,7 @@
 # Términos de Servicio — GoBikeUp
 
-**Última actualización: 29 de junio de 2026**
-**Versión 0.3**
+**Última actualización: 14 de julio de 2026**
+**Versión 0.4**
 
 GoBikeUp es una aplicación móvil de GoBike SpA. Estos Términos de Servicio (los "Términos") regulan tu acceso y uso de la aplicación GoBikeUp para iOS y Android (la "App"). Léelos con atención antes de aceptarlos.
 
@@ -56,9 +56,9 @@ Tu aceptación se registra con fecha y versión. **No basta con el solo uso de l
 | Carabineros | **133** |
 | PDI (Investigaciones) | **134** |
 
-El botón **SOS** de la App es solo una **ayuda complementaria**: cuando lo activas, la App intenta enviar un mensaje de texto (SMS) a los **contactos de emergencia** que tú hayas registrado, con un enlace a tu ubicación. **Esto no avisa a ninguna autoridad ni despacha ayuda profesional.** Por lo mismo, tanto durante la cuenta regresiva ("countdown") como una vez activado el SOS, la App te muestra el recordatorio de llamar al **131** y a los demás números de emergencia. Entiende y aceptas lo siguiente:
+El botón **SOS** de la App es solo una **ayuda complementaria**: cuando lo activas, la App intenta enviar un mensaje de **WhatsApp** a los **contactos de emergencia** que tú hayas registrado, con tu última ubicación y un enlace de seguimiento. **Esto no avisa a ninguna autoridad ni despacha ayuda profesional.** Por lo mismo, tanto durante la cuenta regresiva ("countdown") como una vez activado el SOS, la App te muestra el recordatorio de llamar al **131** y a los demás números de emergencia. Entiende y aceptas lo siguiente:
 
-- **No hay garantía de entrega ni de tiempo.** El envío del SMS depende de factores fuera del control de GoBike: cobertura y señal de la red móvil, carga de batería de tu teléfono, disponibilidad de señal GPS, y el funcionamiento del proveedor de mensajería que utilizamos (Twilio). El mensaje puede demorarse, llegar incompleto o no llegar nunca.
+- **No hay garantía de entrega ni de tiempo.** El envío del mensaje depende de factores fuera del control de GoBike: cobertura y señal de la red móvil o de internet, carga de batería de tu teléfono, disponibilidad de señal GPS, el funcionamiento del proveedor de mensajería que utilizamos (**Meta / WhatsApp**) y que tu contacto **tenga una cuenta de WhatsApp activa** en el número registrado. El mensaje puede demorarse, llegar incompleto o no llegar nunca. GoBike registra los estados de entrega que WhatsApp reporte (enviado, entregado, leído o fallido); por eso, tanto en la cuenta regresiva como durante el SOS la App te recuerda **llamar al 131** y contactar directamente a tus personas cercanas, sin depender únicamente del mensaje.
 - **La ubicación puede ser imprecisa o no actualizarse.** El enlace de ubicación en tiempo real depende del GPS de tu dispositivo y de la conexión a internet; puede mostrar una posición errónea, desactualizada o dejar de actualizarse.
 - **Tus contactos de emergencia son personas particulares, no profesionales de rescate.** Las personas que designes son contactos que tú eliges; no tienen ninguna obligación ni capacitación para acudir, y pueden no ver el mensaje, no responder o no poder ayudarte.
 - **El SOS requiere que la App esté operativa.** Si la App está cerrada, el teléfono apagado o sin servicio, el SOS no funcionará.
@@ -73,7 +73,7 @@ El botón **SOS** de la App es solo una **ayuda complementaria**: cuando lo acti
 
 **Edad mínima.** Para crear una cuenta debes tener al menos **16 años**. Al registrarte declaras, bajo tu responsabilidad, que cumples con esta edad mínima.
 
-**Por qué 16 años.** Fijamos la edad mínima en **16 años** porque la App trata datos de ubicación y opera una función de emergencia (SOS) que puede involucrar datos personales sensibles; bajo la **Ley N° 21.719 (art. 16 quáter)**, el tratamiento de datos sensibles de menores de 16 años requeriría el consentimiento del representante legal. Al fijar el mínimo en 16 evitamos ese supuesto. El tratamiento de tus datos se rige por la **Política de Privacidad**.
+**Por qué 16 años.** Fijamos la edad mínima en **16 años** porque la App trata datos de ubicación y opera una función de emergencia (SOS) que puede involucrar datos personales sensibles; bajo la **Ley N° 21.719 (art. 16 quáter)**, el tratamiento de datos sensibles de menores de 16 años requeriría el consentimiento del representante legal. Por eso **prohibimos** el uso de la App a menores de 16 años y aplicamos medidas para hacerlo efectivo (declaración al registrarte y eliminación de la cuenta si detectamos o nos informan que perteneces a ese grupo); con todo, una autodeclaración de edad puede ser inexacta. El tratamiento de tus datos se rige por la **Política de Privacidad**.
 
 **Datos veraces.** Te comprometes a entregar información veraz, exacta y actualizada al crear y mantener tu cuenta.
 
@@ -163,7 +163,7 @@ La App, su código, diseño, marcas, contenidos propios y datos (incluidos los d
 
 **Disponibilidad del servicio.** Hacemos esfuerzos razonables para que la App funcione correctamente, pero, dentro de lo permitido por la ley, no garantizamos que funcione de forma **ininterrumpida o totalmente libre de errores**, ni que dependa solo de nosotros la cobertura de la red móvil, la señal GPS o los servicios de terceros que la App utiliza.
 
-**Hechos de terceros.** En la **máxima medida permitida por la ley chilena**, GoBike no responderá por daños que tengan su origen en **hechos atribuibles a terceros ajenos a nuestro control**, en particular: el proveedor de mensajería del SOS (**Twilio**), la **red móvil** de tu operador, y la disponibilidad o exactitud de la **señal GPS** de tu dispositivo. Tampoco respondemos por daños **indirectos, incidentales, especiales o consecuenciales** (como lucro cesante o pérdida de datos) que la ley permita excluir.
+**Hechos de terceros.** En la **máxima medida permitida por la ley chilena**, GoBike no responderá por daños que tengan su origen en **hechos atribuibles a terceros ajenos a nuestro control**, en particular: el proveedor de mensajería del SOS (**WhatsApp LLC (WhatsApp Business Platform, grupo Meta)**), la **red móvil** de tu operador, y la disponibilidad o exactitud de la **señal GPS** de tu dispositivo. Tampoco respondemos por daños **indirectos, incidentales, especiales o consecuenciales** (como lucro cesante o pérdida de datos) que la ley permita excluir.
 
 **Lo que esta cláusula NO hace.** Nada en estos Términos excluye ni limita nuestra responsabilidad por **dolo o culpa grave**, ni la responsabilidad que la ley no permite limitar, ni los **derechos que la Ley N° 19.496 te garantiza como consumidor**, incluidos los que protegen tu **seguridad e integridad física**. En particular, estos límites no te privan del resarcimiento que corresponda cuando se frustre la finalidad esencial del servicio. Si alguna parte de esta sección resultara contraria a la ley, se aplicará solo hasta donde la ley lo permita, sin afectar el resto.
 
@@ -215,9 +215,9 @@ Si descargaste la App desde la App Store, además de lo anterior aplica lo sigui
 
 **Divisibilidad.** Si cualquier disposición de estos Términos fuera declarada **nula, ilegal o inexigible** por un tribunal o autoridad competente, las **demás disposiciones seguirán siendo plenamente válidas y exigibles**, y la disposición afectada se aplicará solo hasta donde la ley lo permita.
 
-**Autorización de tus contactos de emergencia.** Al registrar **contactos de emergencia**, declaras que **cuentas con su autorización** para registrarlos y para que reciban **mensajes SMS** y tu **ubicación** cuando actives el SOS. Eres responsable de mantener esa autorización y de informar a esas personas sobre esta función.
+**Autorización de tus contactos de emergencia.** Al registrar **contactos de emergencia**, declaras que **cuentas con su autorización** para registrarlos y para que reciban **mensajes de WhatsApp** y tu **ubicación** cuando actives el SOS. Eres responsable de mantener esa autorización y de informar a esas personas sobre esta función.
 
-**Servicios y enlaces de terceros.** La App utiliza o se integra con servicios de **terceros independientes**, entre ellos: **Twilio** (envío de SMS del SOS), **OpenFreeMap** (tiles del mapa), **Google** y/o **Photon** (geocodificación de direcciones), **Resend** (envío de correos), y **deep links** hacia **WhatsApp** o el **marcador telefónico** para contactar talleres. Estos servicios son operados por terceros bajo sus **propios términos y políticas**; GoBike no controla ni responde por su disponibilidad, contenido o funcionamiento, sin perjuicio de tus derechos como consumidor frente a GoBike.
+**Servicios y enlaces de terceros.** La App utiliza o se integra con servicios de **terceros independientes**, entre ellos: **WhatsApp LLC / WhatsApp Business Platform** (grupo Meta; envío del mensaje de WhatsApp del SOS), **OpenFreeMap** (tiles del mapa), **Google** y/o **Photon** (geocodificación de direcciones), **Resend** (envío de correos), y **deep links** hacia **WhatsApp** o el **marcador telefónico** para contactar talleres. Estos servicios son operados por terceros bajo sus **propios términos y políticas**; GoBike no controla ni responde por su disponibilidad, contenido o funcionamiento, sin perjuicio de tus derechos como consumidor frente a GoBike.
 
 **Cesión.** No puedes ceder ni transferir tus derechos u obligaciones bajo estos Términos sin nuestra autorización previa por escrito. GoBike **sí podrá ceder o transferir** estos Términos —por ejemplo, en el contexto de una **venta, fusión, reorganización o transferencia de activos**—, manteniéndose en todo caso los derechos que la ley te garantiza como consumidor y como titular de datos personales.
 
@@ -227,4 +227,4 @@ Si descargaste la App desde la App Store, además de lo anterior aplica lo sigui
 
 ---
 
-*GoBike SpA — RUT 78.427.191-9 — Avda. Vitacura 5480 of. 38, Vitacura, Santiago, Chile. Contacto: contacto@gobikeup.com — gobikeup.cl. Representante legal: Sebastián Torres Erazo. Versión 0.3 — Última actualización: 29 de junio de 2026.*
+*GoBike SpA — RUT 78.427.191-9 — Avda. Vitacura 5480 of. 38, Vitacura, Santiago, Chile. Contacto: contacto@gobikeup.com — gobikeup.cl. Representante legal: Sebastián Torres Erazo. Versión 0.4 — Última actualización: 14 de julio de 2026.*
