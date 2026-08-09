@@ -3,7 +3,7 @@
 import { motion } from "motion/react"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
+import { StoreButtons } from "@/components/store-buttons"
 import { TextAnimate } from "@/components/ui/text-animate"
 import { DotPattern } from "@/components/ui/dot-pattern"
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text"
@@ -91,19 +91,9 @@ export function Hero() {
               stiffness: 280,
               damping: 24,
             }}
-            className="mt-8 flex flex-wrap items-center gap-4"
+            className="mt-8 flex flex-col items-start gap-5"
           >
-            <a href="#descargar">
-              <ShimmerButton
-                className="h-12 px-6 text-base font-semibold"
-                shimmerColor="var(--primary-foreground)"
-                background="var(--primary)"
-              >
-                <span className="text-primary-foreground">
-                  Únete a la waitlist
-                </span>
-              </ShimmerButton>
-            </a>
+            <StoreButtons />
             <Button
               variant="outline"
               size="lg"
