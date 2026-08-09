@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
-import { Bike, Moon, Sun, Menu } from "lucide-react"
+import { Moon, Sun, Menu } from "lucide-react"
+import { Logo } from "@/components/logo"
 import { ShimmerButton } from "@/components/ui/shimmer-button"
 import {
   Sheet,
@@ -14,6 +15,7 @@ import {
 const links = [
   { label: "Features", href: "#features" },
   { label: "Cómo funciona", href: "#como-funciona" },
+  { label: "Empresas", href: "/empresas" },
 ]
 
 export function Navbar() {
@@ -40,9 +42,7 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/15">
-            <Bike className="h-4 w-4 text-primary" />
-          </div>
+          <Logo className="h-8 w-8" />
           <span className="text-lg font-bold tracking-tight text-foreground">
             GoBikeUp
           </span>
@@ -81,7 +81,7 @@ export function Navbar() {
               shimmerColor="var(--primary-foreground)"
               background="var(--primary)"
             >
-              <span className="text-primary-foreground">Únete a la waitlist</span>
+              <span className="text-primary-foreground">Descargar la app</span>
             </ShimmerButton>
           </a>
 
@@ -113,7 +113,7 @@ export function Navbar() {
                     shimmerColor="var(--primary-foreground)"
                     background="var(--primary)"
                   >
-                    <span className="text-primary-foreground">Únete a la waitlist</span>
+                    <span className="text-primary-foreground">Descargar la app</span>
                   </ShimmerButton>
                 </a>
               </div>
