@@ -1,33 +1,28 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, ChevronDown } from "lucide-react"
 import { LeadForm } from "@/components/empresas/lead-form"
+import { Logo } from "@/components/logo"
 import { BlurFade } from "@/components/ui/blur-fade"
 import { DotPattern } from "@/components/ui/dot-pattern"
 
 export const metadata: Metadata = {
   title: { absolute: "GoBikeUp para empresas" },
   description:
-    "¿Tienes colaboradores que llegan pedaleando? Déjanos tus datos y conversamos cómo GoBikeUp puede acompañarlos: rutas por ciclovías reales de Santiago, botón SOS y talleres en el mapa.",
+    "Impulsa la movilidad sustentable de tus colaboradores y mide el impacto generado. Con GoBikeUp puedes incentivar el uso de la bicicleta, fortalecer el bienestar y obtener métricas reales de viajes, kilómetros y CO₂ evitado.",
   alternates: {
     canonical: "https://www.gobikeup.cl/empresas",
   },
   openGraph: {
-    title: "GoBikeUp para empresas",
+    title: "Convierte cada pedaleo de tu equipo en impacto para tu empresa",
     description:
-      "Déjanos tus datos y conversamos cómo GoBikeUp puede acompañar a quienes llegan pedaleando a tu empresa.",
+      "Impulsa la movilidad sustentable de tus colaboradores y mide el impacto generado con GoBikeUp.",
     url: "https://www.gobikeup.cl/empresas",
     type: "website",
     locale: "es_CL",
     siteName: "GoBikeUp",
   },
 }
-
-const PUNTOS = [
-  "Rutas por las ciclovías reales de Santiago, no por calles con autos.",
-  "Botón SOS que avisa a los contactos que cada persona elija.",
-  "Alertas de la comunidad y talleres a un tap, en el mapa.",
-]
 
 export default function EmpresasPage() {
   return (
@@ -50,48 +45,49 @@ export default function EmpresasPage() {
         </Link>
 
         <BlurFade delay={0}>
-          <p className="text-sm font-semibold tracking-wide text-primary">
+          <p className="flex items-center gap-2 text-sm font-semibold tracking-wide text-primary">
+            <Logo className="h-4 w-4 shrink-0" />
             GoBikeUp para empresas
           </p>
         </BlurFade>
 
-        <BlurFade delay={0.08}>
-          <h1 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            ¿Tienes gente que llega pedaleando?
+        <BlurFade delay={0.12}>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-balance text-foreground sm:text-4xl">
+            Convierte cada pedaleo de tu equipo en impacto para tu empresa
           </h1>
         </BlurFade>
 
-        <BlurFade delay={0.14}>
+        <BlurFade delay={0.18}>
           <p className="mt-4 text-lg text-muted-foreground">
-            GoBikeUp es la app ciclista de Santiago: ya está publicada y es gratis. Cuéntanos
-            de tu empresa y conversamos cómo puede acompañar a quienes se mueven en bici.
+            Impulsa la movilidad sustentable de tus colaboradores y mide el impacto
+            generado.
           </p>
         </BlurFade>
 
-        <BlurFade delay={0.2}>
-          <ul className="mt-6 flex flex-col gap-2.5 border-l-2 border-primary/30 pl-4">
-            {PUNTOS.map((punto) => (
-              <li key={punto} className="text-sm text-muted-foreground">
-                {punto}
-              </li>
-            ))}
-          </ul>
+        <BlurFade delay={0.22}>
+          <p className="mt-3 text-base text-muted-foreground">
+            Con GoBikeUp puedes incentivar el uso de la bicicleta, fortalecer el bienestar y
+            obtener métricas reales de viajes, kilómetros y CO₂ evitado.
+          </p>
         </BlurFade>
 
-        <BlurFade delay={0.26}>
+        <BlurFade delay={0.24}>
           <div className="mt-12">
             <LeadForm />
           </div>
         </BlurFade>
 
-        <BlurFade delay={0.32}>
-          <section
+        <BlurFade delay={0.3}>
+          <details
             id="datos"
-            className="mt-16 scroll-mt-8 border-t border-border pt-8 text-xs leading-relaxed text-muted-foreground"
+            className="group mt-16 scroll-mt-8 border-t border-border pt-8 text-xs leading-relaxed text-muted-foreground"
           >
-            <h2 className="text-sm font-semibold text-foreground">Cómo usamos tus datos</h2>
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-foreground marker:content-none [&::-webkit-details-marker]:hidden">
+              Cómo usamos tus datos
+              <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-180" />
+            </summary>
 
-            <p className="mt-3">
+            <p className="mt-4">
               El responsable del tratamiento es <strong className="font-medium text-foreground">GoBike
               SpA</strong>, RUT 78.427.191-9, con domicilio en Avda. Vitacura 5480, oficina 38,
               Vitacura, Santiago. Puedes escribirnos a{" "}
@@ -115,13 +111,11 @@ export default function EmpresasPage() {
 
             <p className="mt-3">
               <strong className="font-medium text-foreground">Quién los procesa.</strong> Para
-              recibir y responder tu mensaje nos apoyamos en <strong className="font-medium text-foreground">Vercel</strong>{" "}
-              (alojamiento del sitio), <strong className="font-medium text-foreground">Upstash</strong>{" "}
-              (base de datos donde queda tu solicitud) y{" "}
-              <strong className="font-medium text-foreground">Resend</strong> (envío de los
-              correos). Están fuera de Chile, así que enviar este formulario implica una
-              transferencia internacional de tus datos. No los vendemos ni los compartimos con
-              terceros para publicidad.
+              recibir y responder tu mensaje nos apoyamos en proveedores de nube y de correo que
+              están <strong className="font-medium text-foreground">fuera de Chile</strong>, así
+              que enviar este formulario implica una transferencia internacional de tus datos. Si
+              quieres saber cuáles son, escríbenos y te lo contamos. No vendemos tus datos ni los
+              compartimos con terceros para publicidad.
             </p>
 
             <p className="mt-3">
@@ -146,7 +140,7 @@ export default function EmpresasPage() {
               </Link>
               .
             </p>
-          </section>
+          </details>
         </BlurFade>
       </div>
     </main>

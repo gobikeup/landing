@@ -43,7 +43,17 @@ export type LeadValidation =
   | { ok: true; data: Lead }
   | { ok: false; errors: LeadErrors }
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+/**
+ * Solo caracteres que de verdad pueden ir en una dirección de correo.
+ *
+ * La versión permisiva —cualquier cosa que no fuera espacio ni arroba— dejaba
+ * pasar direcciones como `"><script>x</script>@b.cl`. No alcanzaba para inyectar
+ * nada (el HTML se escapa y el `mailto:` va codificado), pero sí para que Resend
+ * intentara enviar a una dirección imposible y se comiera un rebote. Los rebotes
+ * duros dañan la reputación del dominio y empujan los correos legítimos a spam,
+ * así que la validación estricta protege la entrega, no solo la seguridad.
+ */
+const EMAIL_RE = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/
 const PHONE_RE = /^[0-9+()\s.-]+$/
 
 function asString(value: unknown): string {

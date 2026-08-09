@@ -2,11 +2,25 @@
 
 import { useState } from "react"
 import { ArrowRight, Check, ChevronDown, Loader2 } from "lucide-react"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { HEADCOUNT_OPTIONS, validateLead, type LeadErrors } from "@/lib/empresas"
 
 type Status = "idle" | "loading" | "success" | "error"
+
+/**
+ * Un campo tiene que verse relleneable antes de que nadie lo toque.
+ *
+ * El `Input` de shadcn no servía acá: pinta el fondo con `bg-card`, que en el
+ * tema claro es el MISMO valor que `bg-background`, y el borde con `border-input`,
+ * apenas dos puntos por debajo del blanco. El resultado eran campos invisibles
+ * sobre la página. Con `bg-muted` el relleno se despega del fondo en los dos
+ * temas y `border-border` da un contorno que sí se ve.
+ *
+ * Va como constante compartida porque los tres controles —texto, desplegable y
+ * área de texto— tienen que verse iguales, y antes no lo hacían.
+ */
+const FIELD_CLASS =
+  "w-full rounded-lg border border-border bg-muted px-3 text-base text-foreground shadow-xs outline-none transition-[color,box-shadow,border-color] placeholder:text-muted-foreground/50 focus-visible:border-ring focus-visible:bg-card focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
 
 const EMPTY = {
   name: "",
@@ -140,8 +154,7 @@ export function LeadForm() {
         <h2 className="text-xl font-semibold text-foreground">{message}</h2>
         <p className="max-w-sm text-sm text-muted-foreground">
           Te mandamos un correo de confirmación a{" "}
-          <span className="font-medium text-foreground">{values.email}</span>. Si necesitas
-          corregir algo, respóndelo y lo vemos.
+          <span className="font-medium text-foreground">{values.email}</span>.
         </p>
       </div>
     )
@@ -154,7 +167,7 @@ export function LeadForm() {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => update(field, e.target.value),
     "aria-invalid": Boolean(errors[field]),
     "aria-describedby": errors[field] ? `${field}-error` : undefined,
-    className: "h-11 rounded-lg bg-card",
+    className: `h-11 ${FIELD_CLASS}`,
   })
 
   return (
@@ -170,12 +183,12 @@ export function LeadForm() {
       />
 
       <Field id="name" label="Nombre" error={errors.name}>
-        <Input {...inputProps("name")} autoComplete="name" placeholder="Tu nombre y apellido" />
+        <input {...inputProps("name")} autoComplete="name" placeholder="Tu nombre y apellido" />
       </Field>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <Field id="role" label="Cargo" error={errors.role}>
-          <Input
+          <input
             {...inputProps("role")}
             autoComplete="organization-title"
             placeholder="Jefe de operaciones"
@@ -183,7 +196,7 @@ export function LeadForm() {
         </Field>
 
         <Field id="company" label="Empresa" error={errors.company}>
-          <Input
+          <input
             {...inputProps("company")}
             autoComplete="organization"
             placeholder="Nombre de la empresa"
@@ -200,7 +213,9 @@ export function LeadForm() {
             onChange={(e) => update("headcount", e.target.value)}
             aria-invalid={Boolean(errors.headcount)}
             aria-describedby={errors.headcount ? "headcount-error" : undefined}
-            className="h-11 w-full appearance-none rounded-lg border border-input bg-card px-3 text-base text-foreground shadow-xs outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 md:text-sm"
+            className={`h-11 appearance-none pr-9 ${FIELD_CLASS} ${
+              values.headcount === "" ? "text-muted-foreground/50" : ""
+            }`}
           >
             <option value="">Selecciona un tramo</option>
             {HEADCOUNT_OPTIONS.map((option) => (
@@ -215,7 +230,7 @@ export function LeadForm() {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <Field id="email" label="Correo" error={errors.email}>
-          <Input
+          <input
             {...inputProps("email")}
             type="email"
             inputMode="email"
@@ -225,7 +240,7 @@ export function LeadForm() {
         </Field>
 
         <Field id="phone" label="Teléfono" error={errors.phone}>
-          <Input
+          <input
             {...inputProps("phone")}
             type="tel"
             inputMode="tel"
@@ -250,8 +265,8 @@ export function LeadForm() {
           maxLength={500}
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? "message-error" : "message-hint"}
-          className="w-full resize-none rounded-lg border border-input bg-card px-3 py-2.5 text-base text-foreground shadow-xs outline-none transition-[color,box-shadow] placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 md:text-sm"
-          placeholder="Tenemos 40 personas que llegan en bici y queremos apoyarlas mejor."
+          className={`resize-none py-2.5 ${FIELD_CLASS}`}
+          placeholder="Queremos incentivar la movilidad sustentable y medir el impacto de nuestros colaboradores."
         />
       </Field>
 
@@ -274,7 +289,16 @@ export function LeadForm() {
             Autorizo a GoBike SpA a usar estos datos para{" "}
             <span className="text-foreground">contactarme sobre GoBikeUp para empresas</span>.
             Puedes revisar el detalle en{" "}
-            <a href="#datos" className="text-primary underline underline-offset-2">
+            <a
+              href="#datos"
+              // El bloque está colapsado, y un ancla sola no lo abre: saltaría
+              // a un título cerrado y quien fue a leer se queda sin leer.
+              onClick={() => {
+                const bloque = document.getElementById("datos")
+                if (bloque instanceof HTMLDetailsElement) bloque.open = true
+              }}
+              className="text-primary underline underline-offset-2"
+            >
               cómo usamos tus datos
             </a>
             .
@@ -315,7 +339,7 @@ export function LeadForm() {
           </>
         ) : (
           <>
-            Quiero saber más
+            Quiero conocer GoBikeUp
             <ArrowRight className="h-4 w-4" />
           </>
         )}

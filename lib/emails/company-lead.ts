@@ -127,7 +127,6 @@ ${note}
 ${newsletter}
 <div style="margin-top:24px;font-family:${FONT};font-size:13px;color:${COLORS.inkFaint};">
 Llegó el ${santiagoNow()} desde el formulario de <a href="https://www.gobikeup.cl/empresas" style="color:${COLORS.inkFaint};">gobikeup.cl/empresas</a>.
-Responde este correo para contestarle directamente.
 </div>`
 
   return {
@@ -162,9 +161,6 @@ ${row("Cargo", escapeHtml(lead.role))}
 ${row("Colaboradores", headcountLabel(lead.headcount))}
 ${row("Teléfono", escapeHtml(lead.phone))}
 </table>
-<p style="margin:0 0 16px;font-family:${FONT};font-size:16px;line-height:1.6;color:${COLORS.ink};">
-Si algo quedó mal escrito o quieres agregar contexto, responde este mismo correo.
-</p>
 <p style="margin:0;font-family:${FONT};font-size:16px;line-height:1.6;color:${COLORS.inkSoft};">
 Pedalea tranquilo,<br>El equipo de GoBikeUp
 </p>`
