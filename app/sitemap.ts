@@ -9,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://www.gobikeup.cl/empresas",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: "https://www.gobikeup.cl/soporte",
       lastModified: new Date(),
       changeFrequency: "monthly",
