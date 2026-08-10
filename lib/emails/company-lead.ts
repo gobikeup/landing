@@ -98,10 +98,17 @@ export function teamLeadEmail(lead: Lead): RenderedEmail {
   const company = escapeHtml(lead.company)
   const size = headcountLabel(lead.headcount)
 
+  // El icono va a la izquierda y el texto al lado, en dos celdas: si se pusiera
+  // encima empujaría el nombre de la empresa fuera de la vista previa del móvil,
+  // que es justo lo que se quiere leer sin abrir el correo.
   const header = `<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-<td style="font-family:${FONT};font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:${COLORS.paper};">Empresa interesada</td>
-</tr><tr>
-<td style="padding-top:6px;font-family:${FONT};font-size:22px;font-weight:700;color:${COLORS.paper};">${company}</td>
+<td width="44" valign="top" style="padding-right:14px;">
+<img src="${ICON}" width="44" height="44" alt="GoBikeUp" style="display:block;border:0;border-radius:10px;">
+</td>
+<td valign="top">
+<div style="font-family:${FONT};font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:${COLORS.paper};">Empresa interesada</div>
+<div style="padding-top:6px;font-family:${FONT};font-size:22px;font-weight:700;color:${COLORS.paper};">${company}</div>
+</td>
 </tr></table>`
 
   const note = lead.message
