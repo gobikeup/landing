@@ -1,8 +1,27 @@
-# Landing Page — www.gobikeup.com
+# Landing Page — www.gobikeup.cl
+
+> El dominio canónico es **www.gobikeup.cl** (el apex hace 307 → www).
+> `gobikeup.com` es SOLO correo (Resend, contacto@) — no es la web.
 
 ## Que es esto
 
 Landing promocional de GoBikeUp, la app de navegacion ciclista para Santiago de Chile. "Pedalea tranquilo." Sitio estatico, sin backend. Estetica Apple/Linear/Arc — NO template SaaS generico.
+
+## El estado vive en el vault
+
+IMPORTANT: el estado del proyecto —qué está vivo, qué está roto, qué se decidió y por
+qué— vive en **`vault/`** (raíz del checkout), no en este archivo ni en tu memoria.
+
+- **Antes de trabajar:** `vault/00-Home.md` y `vault/10-Estado/Estado del producto.md`
+- **Antes de escribir en el vault:** `vault/_Estandares.md`. El schema del frontmatter no
+  se improvisa — un valor inventado rompe las vistas en silencio
+- **Si el vault y el código se contradicen, gana el código** — y corregir el vault es
+  parte de la tarea, no una nota al pie
+
+El backlog es `vault/20-Trabajo/`. Se opera con `/vault` (capturar), `/spec-forge`
+(spec + QA adversarial) y `/take-task` (ejecutar). Notion quedó retirado el 2026-08-22.
+
+Este archivo cubre las **reglas del código**. El vault cubre el **estado**. No se duplican.
 
 ## Stack
 
