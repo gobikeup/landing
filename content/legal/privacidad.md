@@ -1,7 +1,7 @@
 # Política de Privacidad — GoBikeUp
 
-**Última actualización: 14 de julio de 2026**
-**Versión 0.4**
+**Última actualización: 29 de agosto de 2026**
+**Versión 0.5**
 
 > **Pedalea tranquilo.** Esta política te explica, en lenguaje claro, qué Datos Personales recolectamos cuando usas la App, para qué los usamos, con quién los compartimos y cómo puedes controlarlos. Léela con calma: queremos que sepas exactamente qué pasa con tu información.
 
@@ -63,13 +63,14 @@ GoBikeUp funciona sin que necesites crear una cuenta. Esto significa que hay dos
 
 **Como invitado (sin cuenta):**
 
-- Puedes **ver** el mapa y las ciclovías, **calcular rutas A→B**, y **ver** las alertas comunitarias y los talleres cercanos. Como invitado solo puedes **consultar**: no puedes crear contenido.
+- Puedes **ver** el mapa y las ciclovías, **calcular rutas A→B**, y **ver** las alertas comunitarias y los talleres cercanos.
+- También puedes **reportar alertas comunitarias** (baches, robos, obras, etc.) y **confirmar o desmentir** las que ya existen («Sigue ahí» / «Ya no está»), **sin crear una cuenta**. Antes de tu primer reporte o confirmación te pedimos **aceptar expresamente** estos documentos y **declarar que tienes al menos 16 años** (ver Secciones 7 y 17). Ese contenido queda **atribuido al identificador de tu dispositivo**, no a un nombre.
 - Para estas funciones tratamos tu **geolocalización** (mientras usas la App), el **texto de búsqueda de direcciones** que envías al geocoder, un **identificador del dispositivo** (`device-id`, ver Sección 3), tu **dirección IP**, y datos de **telemetría y diagnóstico**.
 - No tratamos tu nombre ni correo, porque no nos los entregas.
 
 **Como usuario registrado (con cuenta):**
 
-- Crear contenido **requiere una cuenta**. Solo con sesión iniciada puedes: **crear alertas comunitarias**, **escribir reviews de talleres**, **activar un SOS de emergencia** y **guardar contactos de emergencia**.
+- Algunas funciones **sí requieren una cuenta**: **escribir reviews de talleres**, **activar un SOS de emergencia** y **guardar contactos de emergencia**. Las alertas comunitarias puedes reportarlas con o sin cuenta; con sesión iniciada quedan **atribuidas a tu cuenta** en vez de a tu dispositivo.
 - Además tratamos los datos de tu **cuenta** (nombre, correo) y habilitas funciones ligadas a tu identidad: **historial de rutas** (incluida la trayectoria de tus recorridos), **estadísticas personales de actividad**, **SOS de emergencia** con contactos, **reviews de talleres**, y la asociación de tus alertas a tu perfil.
 - Algunas finalidades requieren tu **consentimiento explícito y granular** (por ejemplo, la geolocalización en segundo plano para el SOS y el uso de datos agregados para el modelo B2G).
 
@@ -88,19 +89,22 @@ Recolectamos únicamente los Datos Personales necesarios para que la App funcion
 | **Tipo de bicicleta** (opcional) | La categoría de bici que eliges en los ajustes | Personalizar tu perfil | GoBike SpA — Hetzner (UE) | No |
 | **Contraseña** | Hash `bcrypt` de tu contraseña | Autenticación segura. Nunca se guarda en el dispositivo ni se registra en logs | GoBike SpA — Hetzner (UE) | No |
 | **Tokens de sesión** | Token de acceso (JWT) y token de refresco | Mantener tu sesión iniciada sin volver a pedirte la contraseña. Nunca se registran en logs | En tu dispositivo (`expo-secure-store` / Keychain–Keystore) | No |
-| **Identificador del dispositivo (`device-id`)** | Identificador **persistente** derivado del IDFV (iOS) o del ANDROID_ID (Android), guardado en `expo-secure-store` | (1) Prevención de abuso y límites de uso (*rate limiting*); (2) **analítica de uso y retención** (métricas agregadas de actividad diaria/mensual, p. ej. DAU/MAU). No lo usamos para atribuir contenido, porque crear contenido requiere cuenta. Se purga (ver Sección 14) | GoBike SpA — Hetzner (UE) | Sí |
+| **Identificador del dispositivo (`device-id`)** | Identificador **aleatorio** generado en tu dispositivo la primera vez que usas la App (no deriva de ningún identificador del sistema), guardado en `expo-secure-store` | (1) Prevención de abuso y límites de uso (*rate limiting*); (2) **analítica de uso y retención** (métricas agregadas de actividad diaria/mensual, p. ej. DAU/MAU); (3) **atribución y moderación del contenido que publicas sin cuenta**: la alerta o confirmación que reportas sin sesión queda vinculada a este identificador, lo que permite que la elimines, que otros ciclistas bloqueen a su autor y que GoBike bloquee un dispositivo que abusa. La finalidad (3) se apoya en tu **aceptación expresa** previa cuando publicas sin cuenta (ver Secciones 4 y 7). Cuando publicas **con cuenta**, la alerta se atribuye a tu cuenta y además registramos, aparte de la autoría, **desde qué dispositivo** se publicó (`observed_device_id`), con el único fin de que una suspensión de tu cuenta o un bloqueo por abuso alcance también a ese dispositivo si intenta publicar sin cuenta. Se purga (ver Sección 14) | GoBike SpA — Hetzner (UE) | Sí |
 | **Token de notificaciones push** | Token de notificación de Expo y estado del permiso de notificaciones | Enviarte avisos relevantes de la App (ver Sección 8) | GoBike SpA — Hetzner (UE); Expo, Google FCM y Apple APNs (EE.UU.) | Sí (si concedes el permiso) |
 | **Geolocalización en primer plano** | GPS en vivo mientras usas la App | Navegación paso a paso, recentrar el mapa, mostrar alertas y talleres cercanos, geocoding | Backend GoBike SpA — Hetzner (UE) | Sí |
 | **Geolocalización en segundo plano** | Stream de ubicación cada 5 s, hasta 30 min | **Único uso:** compartir tu recorrido en vivo con tu contacto durante un SOS activo (ver Sección 6) | GoBike SpA — Hetzner (UE); panel `admin.gobikeup.cl/track/{token}`. Se borra a los 90 días | No — requiere cuenta |
 | **Ubicación puntual del SOS** | Coordenadas al disparar y al cancelar + estado del evento (`active`/`cancelled`/`expired`/`im_ok`/`false_alarm`) | Avisar tu ubicación a tus contactos de emergencia | GoBike SpA — Hetzner (UE); la coordenada de **activación** se envía por WhatsApp vía WhatsApp LLC (EE.UU.); la de **cancelación** solo se registra internamente | No — requiere cuenta |
-| **Historial de rutas (incluida la trayectoria)** | Origen, destino, etiquetas, distancia, duración, fecha y la **trayectoria completa (polilínea) del recorrido** que registramos mientras navegas | Permitirte re-navegar rutas, mostrarte tu última ruta y, **solo de forma agregada**, alimentar métricas de uso de ciclovías (ver Sección 13). Puede revelar tu domicilio o trabajo | GoBike SpA — Hetzner (UE) | No |
+| **Historial de rutas (incluida la trayectoria)** | Origen, destino, etiquetas, distancia, duración, fecha, la **ruta que la App te propuso**, el **estado del recorrido** (completado, o cancelado antes de llegar) y la **trayectoria completa (polilínea) del recorrido** que registramos mientras navegas | Permitirte re-navegar rutas, mostrarte tu última ruta, comparar la ruta propuesta con la que hiciste —incluidos los recorridos cancelados— para mejorar las rutas que sugerimos y, **solo de forma agregada**, alimentar métricas de uso de ciclovías (ver Sección 13). Puede revelar tu domicilio o trabajo | GoBike SpA — Hetzner (UE) | No |
 | **Estadísticas personales de actividad** | Cifras derivadas de tu uso: kilómetros totales, horas totales, número de rutas, alertas reportadas, CO₂ ahorrado estimado y fecha de ingreso | Mostrarte tu actividad en tu perfil | GoBike SpA — Hetzner (UE) | No |
 | **Historial de eventos SOS** | Registro de tus SOS pasados y su estado | Mostrarte tu historial y dar seguimiento a emergencias | GoBike SpA — Hetzner (UE) | No |
-| **Alertas comunitarias** | **Tipo** de alerta (bache, robo, obra, sin luz, perro, vía cortada, etc.) y **ubicación GPS** del incidente | Mostrar alertas comunitarias en el mapa a otros ciclistas (sin foto) | GoBike SpA — Hetzner (UE). Atribuidas a tu cuenta | No (crear requiere cuenta) |
+| **Alertas comunitarias** | **Tipo** de alerta (bache, robo, obra, sin luz, perro, vía cortada, etc.), **ubicación GPS** del incidente, **fecha y hora** del reporte y su **atribución**: a tu cuenta si tienes sesión iniciada, **y si no, al identificador de tu dispositivo** (`device-id`) | Mostrar alertas comunitarias en el mapa a otros ciclistas (sin foto); permitir que elimines tu reporte y que la comunidad y GoBike lo moderen | GoBike SpA — Hetzner (UE). Atribuidas a tu cuenta o, sin cuenta, a tu dispositivo | **Sí** (con aceptación expresa previa) |
+| **Confirmaciones de alertas (votos)** | Tu voto **±1** sobre una alerta («Sigue ahí» / «Ya no está»), la alerta a la que se refiere (que tiene ubicación), la **fecha y hora** del voto y su **atribución**: a tu cuenta si tienes sesión, y si no, al identificador de tu dispositivo | Mantener vigentes las alertas que siguen ahí y retirar las que ya no; un voto por persona o dispositivo y alerta | GoBike SpA — Hetzner (UE) | **Sí** (con aceptación expresa previa) |
+| **Aceptación para publicar sin cuenta** | El registro de que aceptaste estos documentos antes de tu primera publicación sin cuenta: identificador de tu dispositivo, **versión** de los Términos y de la Política que aceptaste, el hecho de que **declaraste tener al menos 16 años** (sí/no, nunca tu edad) y la **fecha y hora** de la aceptación | Acreditar que la aceptación existió y a qué versión corresponde; volver a pedírtela cuando los documentos cambien | GoBike SpA — Hetzner (UE) | **Sí** (solo si publicas sin cuenta) |
 | **Contactos de emergencia (terceros)** | Nombre, teléfono (E.164) y relación del contacto | Notificarles por WhatsApp cuando actives un SOS | GoBike SpA — Hetzner (UE); el teléfono se envía a WhatsApp LLC (EE.UU.) como destinatario del mensaje | No (requiere cuenta) |
 | **Reviews de talleres** | Texto de la reseña, calificación y tu **nombre** (se muestra públicamente junto a la reseña) | Publicar tu reseña (contenido público atribuido a tu perfil) | GoBike SpA — Hetzner (UE) | No (requiere cuenta) |
 | **Interacciones con talleres (analítica propia)** | Eventos por taller: ver ficha, tocar llamar, tocar WhatsApp, tocar navegar | Entender qué talleres se usan y cómo, para mejorar el producto (analítica de producto **propia**, no de terceros) | GoBike SpA — Hetzner (UE) | Sí |
 | **Datos de postulación GoBikeTalleres (B2B)** | Nombre de contacto, correo, teléfono, dirección, coordenadas (lat/lng), motivación y origen de la referencia del taller postulante | Recibir y gestionar postulaciones de talleres a la plataforma (ver Sección 9) | GoBike SpA — Hetzner (UE); correo transaccional vía Resend (EE.UU.) | Sí (formulario abierto) |
+| **Mensajes de soporte y sugerencias** | El mensaje que escribes y el tipo de solicitud; un **correo de contacto si decides darlo** (sin cuenta) o el nombre y correo de tu cuenta; el recorrido al que se refiere, si lo adjuntas; y datos técnicos para reproducir el problema: versión de la App, sistema operativo y su versión, modelo del teléfono e identificador del dispositivo | Atender tu solicitud, responderte si dejaste un correo y mejorar la App | GoBike SpA — Hetzner (UE); el aviso al equipo se envía por correo vía Resend (EE.UU.) | Sí |
 | **Texto de búsqueda de direcciones** | Lo que escribes para buscar una dirección (puede contener tu domicilio) | Convertir la dirección en coordenadas (geocoding) | **Google Geocoding (EE.UU.)** — proveedor en producción; la consulta viaja vía nuestro backend (Hetzner, UE) | Sí |
 | **Dirección IP** | IP de tu conexión | Seguridad, prevención de abuso, enrutamiento y entrega del servicio | Cloudflare (proxy/WAF, global), Hetzner (UE), OpenFreeMap | Sí |
 | **Telemetría de errores (backend)** | Stack traces, breadcrumbs y contexto técnico de los errores que ocurren en **nuestro servidor** (no en tu dispositivo) | Detectar y corregir fallas, mejorar estabilidad (ver Sección 12). La App no envía telemetría; se procesa **server-side** y se depura (*scrub*) para no incluir Datos Personales | GoBike SpA — Hetzner (UE); telemetría depurada en Sentry (EE.UU.) | No (no se recolecta de tu dispositivo) |
@@ -129,8 +133,12 @@ Tratamos tus Datos Personales solo cuando existe una base de licitud que lo perm
 | Enviar notificaciones push | Token de notificación, estado del permiso | **Consentimiento** al conceder el permiso del sistema (art. 12) |
 | Recibir y gestionar postulaciones GoBikeTalleres (B2B) | Datos de postulación del taller | Ejecución de medidas precontractuales / interés legítimo (art. 13) |
 | Publicar alertas comunitarias | Tipo de alerta, ubicación GPS | Ejecución del servicio y **consentimiento** para la publicación (arts. 12 y 13) |
+| Acreditar tu aceptación para publicar sin cuenta | Registro de aceptación (dispositivo, versiones, declaración de edad, fecha) | Interés legítimo del Responsable en poder **probar** que el consentimiento y la aceptación de los Términos existieron (art. 13), ponderado frente a tus derechos |
+| **Atribuir y moderar el contenido publicado sin cuenta** (alertas y confirmaciones de invitados) | Identificador del dispositivo vinculado a la alerta o al voto | **Consentimiento explícito** (art. 12), otorgado en la App antes de tu primer reporte o confirmación sin cuenta, con declaración de edad. Lo revocas eliminando tu contenido desde la App o pidiéndonoslo (ver Secciones 15 y 16); al revocarlo dejamos de tratar ese vínculo. |
 | Guardar tu historial de rutas y trayectorias para re-navegar y ver tu actividad | Historial de rutas (incluida la polilínea), estadísticas personales | Ejecución del servicio (art. 13) |
 | Publicar reviews de talleres | Texto, calificación, nombre | Ejecución del servicio y **consentimiento** para la publicación (arts. 12 y 13) |
+| Atender tus mensajes de soporte y sugerencias | Mensaje, correo de contacto, datos técnicos y recorrido adjunto | Ejecución del servicio que solicitas al escribirnos (art. 13); el correo de contacto, porque decides entregarlo para que te respondamos (art. 12) |
+| Medir la calidad de las rutas que sugerimos (ruta propuesta y recorridos cancelados) | Historial de rutas | Interés legítimo del Responsable (art. 13), ponderado frente a tus derechos |
 | Analítica de producto propia sobre uso de talleres | Interacciones con talleres | Interés legítimo del Responsable (art. 13), ponderado frente a tus derechos |
 | Detectar y corregir errores (telemetría) | Telemetría y diagnóstico, IP | Interés legítimo del Responsable (art. 13) |
 | Cumplir obligaciones legales o requerimientos de autoridad | Las categorías que la ley exija conservar o entregar | Cumplimiento de una obligación legal (art. 13) |
@@ -140,7 +148,7 @@ Tratamos tus Datos Personales solo cuando existe una base de licitud que lo perm
 
 **Datos sensibles e interés vital.** Cuando un tratamiento involucre datos personales sensibles en el contexto de una emergencia, podrá ampararse en el **interés vital** del titular o de un tercero, conforme al **artículo 16 letra c)** de la Ley N° 21.719. Puedes revocar tu consentimiento en cualquier momento (ver Sección 15); la revocación no afecta la licitud del tratamiento previo a ella.
 
-**Consentimiento granular.** Cada finalidad basada en consentimiento —geolocalización en segundo plano, notificaciones push y métricas B2G— se solicita por separado. Aceptar una no implica aceptar las demás, y puedes retirar cada una de forma independiente.
+**Consentimiento granular.** Cada finalidad basada en consentimiento —geolocalización en segundo plano, notificaciones push, métricas B2G y la atribución del contenido que publicas sin cuenta— se solicita por separado. Aceptar una no implica aceptar las demás, y puedes retirar cada una de forma independiente.
 
 ---
 
@@ -237,21 +245,33 @@ Las alertas comunitarias te permiten reportar baches, robos, obras, falta de luz
 
 ### 7.1 Qué datos recolectamos en una alerta
 
-Crear una alerta **requiere una cuenta**. Cuando creas una alerta recolectamos únicamente:
+Para reportar una alerta **no necesitas tener cuenta**. Cuando reportas una alerta recolectamos únicamente:
 
 - **Tipo de alerta:** la categoría del incidente (bache, robo, obra, sin luz, perro, vía cortada, etc.).
-- **Ubicación GPS:** el punto donde ocurre el incidente que reportas.
-- **Atribución:** la alerta queda vinculada a tu **cuenta**.
+- **Ubicación GPS:** el punto donde ocurre el incidente que reportas (tu posición en el momento del reporte).
+- **Fecha y hora** del reporte.
+- **Atribución:** la alerta queda vinculada a tu **cuenta** si tienes sesión iniciada, **y si no, al identificador de tu dispositivo** (`device-id`, ver Sección 3). Si publicas con cuenta, registramos además desde qué dispositivo lo hiciste (ver Sección 3, `device-id`).
 
-**No subimos fotos.** La creación de alertas en la App **no captura ni sube imágenes**: no hay selector de fotos ni uso de la cámara para esta función, y no recolectamos descripción de texto. Solo registramos el **tipo** y la **ubicación**.
+Lo mismo aplica cuando **confirmas o desmientes** una alerta existente («Sigue ahí» / «Ya no está»): guardamos tu voto, la alerta a la que se refiere y la misma atribución.
+
+**No subimos fotos ni texto libre.** La creación de alertas en la App **no captura ni sube imágenes**: no hay selector de fotos ni uso de la cámara para esta función, y no recolectamos descripción de texto. Solo registramos el **tipo**, la **ubicación**, la **fecha y hora** y la atribución.
 
 ### 7.2 Visibilidad pública y moderación
 
 - **Visibilidad:** el tipo y la ubicación de tus alertas son **públicos**: cualquier usuario de la App puede verlos en el mapa.
 - **Moderación:** podemos revisar, ocultar o eliminar alertas que sean ofensivas, falsas, abusivas o ilegales.
-- **Eliminación:** si quieres que eliminemos una alerta tuya, escríbenos a [contacto@gobikeup.com](mailto:contacto@gobikeup.com) y la revisaremos (ver tus derechos en la Sección 15).
+- **Bloqueo de autores:** cualquier usuario puede **bloquear** al autor de una alerta —tenga cuenta o no— para dejar de ver su contenido. Bloquear a un autor sin cuenta bloquea a su dispositivo; la App nunca muestra ni entrega ese identificador a otros usuarios.
+- **Eliminación:** puedes **eliminar tu propio reporte desde la App** («Eliminar mi reporte»), con o sin cuenta. También puedes escribirnos a [contacto@gobikeup.com](mailto:contacto@gobikeup.com) (ver Secciones 15 y 16).
 
-**Base de licitud:** ejecución del servicio y tu **consentimiento** al crear y publicar una alerta (ver Sección 4).
+### 7.3 Reportar sin cuenta
+
+Si reportas o confirmas una alerta **sin tener cuenta**, antes de tu primera publicación la App te muestra una hoja de aceptación en la que **aceptas expresamente** estos documentos y **declaras tener al menos 16 años** (ver Sección 17). A partir de ahí:
+
+- Tu reporte es **público** y visible para otros ciclistas en el mapa, igual que cualquier alerta.
+- Se guarda el **identificador de tu dispositivo** vinculado al reporte, **únicamente** para poder atribuirlo y moderarlo: que puedas eliminarlo, que otros puedan bloquear a su autor y que GoBike pueda **bloquear un dispositivo** que abuse del servicio. No se usa para ningún otro fin.
+- El contenido publicado sin cuenta se **elimina automáticamente 30 días después de dejar de estar activo**, junto con sus confirmaciones y el vínculo con tu dispositivo (ver Sección 14). Puedes eliminarlo antes desde la App.
+
+**Base de licitud:** ejecución del servicio y tu **consentimiento** al crear y publicar una alerta; para la atribución y moderación del contenido publicado sin cuenta, tu **consentimiento explícito** otorgado en esa hoja (ver Sección 4).
 
 ---
 
@@ -300,8 +320,9 @@ La App guarda en tu dispositivo lo necesario para funcionar. Algunos datos van a
 | **Búsquedas recientes de direcciones** | `AsyncStorage` (**no cifrado**) | Mostrarte tus búsquedas recientes. Incluyen el texto buscado **y sus coordenadas**, por lo que **pueden revelar tu domicilio o lugar de trabajo** |
 | Preferencia de tema (claro/oscuro) | `AsyncStorage` (no cifrado) | Recordar cómo prefieres ver la App |
 | Preferencia de capas del mapa | `AsyncStorage` (no cifrado) | Recordar tu configuración del mapa |
+| **Recorrido en curso y cierres pendientes** (solo con cuenta) | `AsyncStorage` (**no cifrado**) | Mientras navegas guardamos el recorrido en curso (puntos GPS, ruta propuesta, origen y destino) para no perderlo si la App se cierra, y el cierre de un recorrido que no pudo enviarse por falta de red, para reintentarlo. **Revelan por dónde anduviste.** Se borran al guardarse el recorrido, al cerrar sesión y al borrar la cuenta; nunca se suben a una cuenta distinta de la que los generó |
 
-> **`AsyncStorage` no es almacenamiento cifrado**, a diferencia de `expo-secure-store`. Por eso solo guardamos ahí datos de baja sensibilidad (preferencias) y tus búsquedas recientes, que puedes borrar limpiando los datos de la App desde los ajustes de tu teléfono.
+> **`AsyncStorage` no es almacenamiento cifrado**, a diferencia de `expo-secure-store`. Por eso lo que guardamos ahí es de baja sensibilidad (preferencias) o temporal (tus búsquedas recientes y el recorrido en curso, ver la tabla), y puedes borrarlo limpiando los datos de la App desde los ajustes de tu teléfono.
 
 **Lo que NUNCA se guarda en tu dispositivo:**
 
@@ -331,7 +352,7 @@ Queremos ser honestos contigo: **algunos de estos proveedores están fuera de Ch
 | **Cloudflare R2** | Imágenes que pudieras subir asociadas a contenido (object storage; `uploads.gobikeup.cl`) | Estados Unidos / red global | Almacenamiento y entrega de fotos |
 | **WhatsApp LLC (WhatsApp Business Platform, grupo Meta)** | Teléfono (E.164) de tus contactos de emergencia (destinatarios), tu nombre, las coordenadas exactas y la dirección obtenida por geocodificación inversa del SOS (para el mapa del mensaje) y el token de seguimiento (en el enlace del botón) | Estados Unidos | Envío del mensaje de WhatsApp de emergencia (SOS) a tus contactos y reporte de su estado de entrega (ver Sección 6). Los datos de contacto se rigen por su acuerdo de procesamiento de datos; el contenido del mensaje, por los términos de la WhatsApp Business Platform. El plazo de retención de 90 días aplica a **nuestros** sistemas: la copia del mensaje entregada en el chat de tu contacto queda en WhatsApp y en su dispositivo, fuera de nuestro control |
 | **Expo / Google FCM / Apple APNs** | Token de notificación y contenido del aviso push | Estados Unidos | Entrega de notificaciones push a tu teléfono (ver Sección 8) |
-| **Resend** | Nombre, correo y datos de la postulación GoBikeTalleres incluidos en el correo transaccional | Estados Unidos | Envío de correos transaccionales (postulaciones B2B, ver Sección 9) |
+| **Resend** | Nombre, correo y datos de la postulación GoBikeTalleres incluidos en el correo transaccional; y el aviso al equipo de cada mensaje de soporte o sugerencia que envías desde la App (con tu nombre y correo si tienes cuenta, o el correo de contacto que decidas dar) | Estados Unidos | Envío de correos transaccionales: postulaciones B2B (ver Sección 9) y avisos internos de soporte (ver Sección 3) |
 | **Google (Geocoding)** | Texto de búsqueda de direcciones (puede contener tu domicilio), coordenadas de consulta | Estados Unidos | Convertir direcciones en coordenadas (geocoding). **Proveedor activo en producción** |
 | **Photon / komoot** | Texto de búsqueda de direcciones, coordenadas de consulta | Unión Europea | Geocoding — **alternativa técnica, no activa en la configuración actual** |
 | **Sentry** | Telemetría de errores **del backend**, depurada (sin Datos Personales): stack traces, breadcrumbs y contexto técnico del servidor | Estados Unidos | Detección y diagnóstico de errores y fallas del servidor (ver Sección 12) |
@@ -414,6 +435,8 @@ El proceso de anonimización previsto, que se aplicará **en nuestro backend** a
 2. **Supresión de celdas pequeñas (k-anonimato)**: se **eliminan las celdas con menos de 5 viajes** (k < 5), para que ningún dato apunte a una persona en un grupo demasiado chico.
 3. **Recorte de origen y destino**: se **descartan los extremos del recorrido** (los puntos de inicio y fin), que son los que podrían revelar tu domicilio o lugar de trabajo.
 
+
+
 ### Prohibición de re-identificación
 
 En los contratos con municipalidades y organismos públicos **prohibimos expresamente cualquier intento de re-identificación**, así como cruzar estos datos con otras fuentes para volver a identificar personas.
@@ -431,7 +454,7 @@ Por regla general, conservamos tus Datos Personales **mientras exista tu cuenta*
 | Datos de cuenta (nombre, correo, UUID interno, `systemRole`, teléfono y tipo de bici si los agregas) | Mientras exista tu cuenta | Se eliminan al borrar la cuenta |
 | Contraseña (hash bcrypt) | Mientras exista tu cuenta | Se elimina al borrar la cuenta |
 | Tokens de sesión (access JWT + refresh) en el dispositivo | Vida útil del token / hasta que cierras sesión | Se revocan y eliminan al cerrar sesión o borrar la cuenta |
-| Identificador del dispositivo (`device-id`) y métricas de actividad asociadas (DAU/MAU) | Mientras tengas la App instalada; las métricas de actividad se **purgan** transcurrido un plazo de retención | Se elimina al desinstalar o limpiar los datos de la App; las métricas se purgan al vencer el plazo |
+| Identificador del dispositivo (`device-id`) y métricas de actividad asociadas (DAU/MAU) | El identificador vive en tu dispositivo mientras tengas la App instalada; en nuestros servidores solo existe asociado a lo que se describe en las filas siguientes (métricas, contenido sin cuenta, aceptación, bloqueos). Las métricas de actividad se **purgan** transcurrido un plazo de retención | El identificador se genera al azar en tu dispositivo y no deriva de ningún identificador del sistema. En Android, desinstalar la App o limpiar sus datos lo borra; en iOS, el almacenamiento seguro del sistema puede conservarlo tras una reinstalación hasta que restablezcas el teléfono (no podemos detectarlo desde el servidor); lo asociado en el servidor sigue los plazos de su fila |
 | Token de notificaciones push | Mientras mantengas el permiso y la App instalada | Se elimina al revocar el permiso, desinstalar o borrar la cuenta |
 | Historial de rutas (origen, destino, etiquetas, distancia, duración, fecha, trayectoria/polilínea) | Mientras exista tu cuenta | Se elimina al borrar la cuenta |
 | Estadísticas personales de actividad | Mientras exista tu cuenta | Se eliminan al borrar la cuenta |
@@ -439,10 +462,16 @@ Por regla general, conservamos tus Datos Personales **mientras exista tu cuenta*
 | Ubicación en vivo durante un SOS (stream de segundo plano) | **90 días**, con borrado automático | Se elimina automáticamente al cumplirse el plazo, aunque tu cuenta siga activa |
 | Ubicación puntual del SOS (disparo/cancelación), token de seguimiento y registros de notificación | **90 días**, con borrado automático | Se eliminan automáticamente al cumplirse el plazo. El **historial del evento** (que hubo un SOS, su estado y hora, ya sin ubicación) se conserva mientras exista tu cuenta |
 | Contactos de emergencia (nombre, teléfono E.164, relación) | Mientras los mantengas en tu cuenta | Se eliminan al borrarlos o al borrar la cuenta |
-| Alertas comunitarias (tipo, ubicación) | Como contenido comunitario público, mientras sean vigentes | Se eliminan o anonimizan al borrar la cuenta o al moderarse |
+| Alertas comunitarias **con cuenta** (tipo, ubicación) | Como contenido comunitario público, mientras sean vigentes | Se eliminan o anonimizan al borrar la cuenta o al moderarse |
+| Alertas comunitarias **sin cuenta** (tipo, ubicación, vínculo con el `device-id`) | **30 días contados desde que la alerta deja de estar activa** (vence, se retira o se modera), con borrado automático | Se elimina la **alerta completa**, sus confirmaciones y el vínculo con el dispositivo — no solo el vínculo. Puedes eliminarla antes desde la App |
+| Confirmaciones de alertas (votos ±1), con o sin cuenta | Mientras exista la alerta a la que se refieren. Las confirmaciones **sin cuenta** sobre alertas publicadas **con cuenta** se conservan hoy mientras exista esa alerta | Se eliminan junto con la alerta; las de una cuenta se eliminan además al borrar la cuenta |
+| Aceptación para publicar sin cuenta (dispositivo, versiones, declaración de edad, fecha) | Mientras la versión de los documentos que aceptaste siga vigente, como prueba de la aceptación | Deja de usarse cuando revocas (borrando tu contenido) o cuando cambia la versión; se elimina al vencer el plazo |
+| Bloqueos que hiciste a autores sin cuenta (tu cuenta ↔ dispositivo bloqueado) | Mientras mantengas el bloqueo o exista tu cuenta | Se eliminan al desbloquear o al borrar la cuenta |
+| Dispositivos bloqueados por GoBike por abuso (`device_bans`: dispositivo, motivo, fecha) | Mientras dure la medida | Se elimina al levantarse el bloqueo |
 | Reviews de talleres (UGC público) | Mientras exista tu cuenta | Se eliminan o se desvinculan de tu perfil al borrar la cuenta |
 | Interacciones con talleres (analítica propia) | Mientras exista tu cuenta | Se eliminan o se desvinculan de tu perfil al borrar la cuenta |
 | Datos de postulación GoBikeTalleres (B2B) | Mientras dure la evaluación / la relación; en caso contrario, plazo razonable | Se eliminan o anonimizan al vencer el plazo |
+| Mensajes de soporte y sugerencias | Mientras exista tu cuenta; los enviados **sin cuenta** se conservan hasta atenderlos y hoy **no tienen un plazo de borrado automático** | Se eliminan al borrar la cuenta; los enviados sin cuenta, a tu solicitud por correo (indicando el identificador de tu dispositivo, ver Sección 15) |
 | Búsquedas recientes de direcciones (on-device) | En tu dispositivo (`AsyncStorage`), hasta que limpies los datos de la App | No salen del dispositivo; las controlas tú |
 | Texto de búsqueda de direcciones (geocoding) | No lo almacenamos de forma persistente en el backend; se procesa para responder tu consulta | El proveedor de geocoding puede conservar logs según su propia política |
 | IP del cliente y logs de infraestructura | **90 días** | Se eliminan automáticamente al vencer el plazo |
@@ -473,6 +502,14 @@ Como titular de Datos Personales, la ley te reconoce un conjunto de derechos —
 - **Canal y mecanismo:** puedes ejercer tus derechos directamente desde la App —por ejemplo, editando tu perfil, ajustando tus permisos o eliminando tu cuenta (ver Sección 16)— y, para cualquier solicitud, escribiéndonos a **contacto@gobikeup.com** indicando el derecho que quieres ejercer.
 - Para proteger tu información, podemos pedirte que **acredites tu identidad** antes de responder, de modo de no entregar tus datos a un tercero.
 - **Plazo de respuesta:** te responderemos en un plazo de **30 días corridos** contados desde tu solicitud. Este plazo puede **prorrogarse por una sola vez, hasta por 30 días corridos adicionales**, informándote de la prórroga y sus razones (conforme al **artículo 11 de la Ley N° 21.719**).
+
+### Si publicaste sin cuenta
+
+Si reportaste o confirmaste alertas **sin tener cuenta**, los únicos Datos Personales tuyos que tratamos son los de ese contenido y el identificador de tu dispositivo. Puedes ejercer tus derechos igual:
+
+- **Desde la App**, sin escribirnos: «Eliminar mi reporte» borra tu alerta con sus confirmaciones y el vínculo con tu dispositivo. Es la vía más rápida y no requiere que acredites nada, porque la App ya sabe que ese dispositivo publicó ese reporte.
+- **Por correo** a **contacto@gobikeup.com**, para acceso, supresión u oposición. Como no tienes cuenta ni correo asociado, para atender tu solicitud te pediremos **el identificador de tu dispositivo** (visible en la App, en la pantalla **«Privacidad»**, también sin cuenta) y, si puedes, el **tipo, la fecha aproximada y la zona** del reporte. Sin esa información **no podemos identificarte como titular** de ese contenido: en ese caso no eliminaremos el reporte —hacerlo permitiría que cualquiera borrara el contenido de otra persona— y te responderemos indicándote la vía desde la App.
+- El **plazo del artículo 11** (30 días corridos, prorrogables por una vez) aplica igual a estas solicitudes.
 
 ### Revocar tu consentimiento
 
@@ -514,15 +551,23 @@ Solo unas pocas categorías no se borran de inmediato, por razones acotadas y le
 
 Si en lugar de borrar la cuenta solo quieres **cerrar sesión** o **dejar de usar una función** (por ejemplo, revocar el permiso de ubicación o de notificaciones), puedes hacerlo sin eliminar tu cuenta (ver Sección 15).
 
+### Si publicaste sin cuenta: borrar tu contenido
+
+Si reportaste o confirmaste alertas sin tener cuenta, no hay una cuenta que borrar: lo que puedes borrar es **el contenido**.
+
+- **Desde la App:** abre tu alerta en el mapa y toca **«Eliminar mi reporte»**. Se elimina la alerta, sus confirmaciones y el vínculo con tu dispositivo, de inmediato.
+- **Si perdiste el dispositivo, lo cambiaste o reinstalaste la App:** el identificador del dispositivo se genera en el aparato y se guarda solo ahí; al cambiar de teléfono —y, en Android, al reinstalar la App—, la App deja de reconocer tus reportes anteriores como tuyos y ya no podrás eliminarlos desde ella. En ese caso escríbenos a **contacto@gobikeup.com** con la información de la Sección 15 («Si publicaste sin cuenta»). Y en cualquier caso, ese contenido se **elimina solo a los 30 días** de dejar de estar activo (ver Sección 14).
+- **Confirmaciones («Sigue ahí» / «Ya no está»):** se eliminan junto con la alerta a la que se refieren.
+
 ---
 
 ## 17. Menores de edad (niños, niñas y adolescentes)
 
-La App está pensada para personas de **16 años o más**. **No admitimos el registro de menores de 16 años.**
+La App está pensada para personas de **16 años o más**. **No admitimos el registro de menores de 16 años ni que un menor de 16 publique contenido sin cuenta.**
 
 ### Cómo verificamos la edad
 
-Al registrarte, te pedimos **confirmar mediante una casilla** que tienes **al menos 16 años** ("Confirmo que tengo al menos 16 años"). Es una **declaración tuya**: la App **no** recolecta tu fecha ni tu año de nacimiento, y no guardamos ningún dato de edad. La verificación de la edad mínima se basa únicamente en esa **autodeclaración**. Si detectamos una cuenta de un menor de 16 años, la eliminaremos junto con sus datos.
+Al registrarte, te pedimos **confirmar mediante una casilla** que tienes **al menos 16 años** ("Confirmo que tengo al menos 16 años"). Si publicas **sin cuenta**, la hoja de aceptación que aparece antes de tu primer reporte te pide lo mismo («Declaro que tengo al menos 16 años»). En ambos casos es una **declaración tuya**: la App **no** recolecta tu fecha ni tu año de nacimiento. Con cuenta no guardamos ningún dato de edad; sin cuenta guardamos únicamente **que hiciste la declaración** (sí/no) junto con la aceptación, como prueba (ver Sección 3). La verificación de la edad mínima se basa únicamente en esa **autodeclaración**. Si detectamos una cuenta de un menor de 16 años, la eliminaremos junto con sus datos; si detectamos contenido publicado **sin cuenta** por un menor de 16 años, **eliminaremos ese contenido y bloquearemos el dispositivo** desde el que se publicó.
 
 ### Por qué la edad mínima es 16 años
 
@@ -530,7 +575,7 @@ La Ley N° 21.719 establece una protección reforzada para adolescentes **menore
 
 Como GoBikeUp trata datos de **ubicación** y opera una función de **emergencia (SOS)** que puede involucrar datos sensibles, hemos fijado la **edad mínima de uso en 16 años**. De este modo, no tratamos datos sensibles de adolescentes menores de 16 que requieran el consentimiento de su representante legal.
 
-Si eres **padre, madre o representante legal** y crees que un menor de 16 años a tu cargo creó una cuenta declarando una edad falsa, escríbenos a **contacto@gobikeup.com** y eliminaremos la cuenta y sus datos.
+Si eres **padre, madre o representante legal** y crees que un menor de 16 años a tu cargo creó una cuenta o publicó contenido declarando una edad falsa, escríbenos a **contacto@gobikeup.com** y eliminaremos la cuenta y sus datos, o el contenido y el acceso del dispositivo, según corresponda.
 
 ### Una recomendación honesta
 
@@ -557,6 +602,8 @@ Si ocurre una **vulneración de seguridad** que afecte tus Datos Personales, act
 
 - **Notificación a la Agencia de Protección de Datos Personales:** la ley chilena **no contempla un plazo fijo de 72 horas** (ese plazo es propio del RGPD europeo). Conforme al **artículo 14 sexies**, notificaremos a la Agencia por los **medios más expeditos posibles y sin dilaciones indebidas** una vez que tomemos conocimiento de la vulneración.
 - **Notificación a ti (titular):** la obligación de informarte directamente se **gatilla según la categoría de los datos afectados** y el riesgo asociado (por ejemplo, cuando se vean afectados datos sensibles o de geolocalización). Cuando corresponda, te informaremos —por correo o dentro de la App— describiendo qué ocurrió, qué datos se vieron afectados y qué medidas estamos tomando.
+
+
 
 ---
 

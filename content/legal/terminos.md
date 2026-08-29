@@ -1,7 +1,7 @@
 # Términos de Servicio — GoBikeUp
 
-**Última actualización: 14 de julio de 2026**
-**Versión 0.4**
+**Última actualización: 29 de agosto de 2026**
+**Versión 0.5**
 
 GoBikeUp es una aplicación móvil de GoBike SpA. Estos Términos de Servicio (los "Términos") regulan tu acceso y uso de la aplicación GoBikeUp para iOS y Android (la "App"). Léelos con atención antes de aceptarlos.
 
@@ -71,9 +71,9 @@ El botón **SOS** de la App es solo una **ayuda complementaria**: cuando lo acti
 
 ## 3. Tu cuenta y elegibilidad
 
-**Edad mínima.** Para crear una cuenta debes tener al menos **16 años**. Al registrarte declaras, bajo tu responsabilidad, que cumples con esta edad mínima.
+**Edad mínima.** Para crear una cuenta **y para publicar contenido sin cuenta** debes tener al menos **16 años**. Al registrarte, y al aceptar la hoja que aparece antes de tu primer reporte sin cuenta («Declaro que tengo al menos 16 años»), declaras bajo tu responsabilidad que cumples con esta edad mínima.
 
-**Por qué 16 años.** Fijamos la edad mínima en **16 años** porque la App trata datos de ubicación y opera una función de emergencia (SOS) que puede involucrar datos personales sensibles; bajo la **Ley N° 21.719 (art. 16 quáter)**, el tratamiento de datos sensibles de menores de 16 años requeriría el consentimiento del representante legal. Por eso **prohibimos** el uso de la App a menores de 16 años y aplicamos medidas para hacerlo efectivo (declaración al registrarte y eliminación de la cuenta si detectamos o nos informan que perteneces a ese grupo); con todo, una autodeclaración de edad puede ser inexacta. El tratamiento de tus datos se rige por la **Política de Privacidad**.
+**Por qué 16 años.** Fijamos la edad mínima en **16 años** porque la App trata datos de ubicación y opera una función de emergencia (SOS) que puede involucrar datos personales sensibles; bajo la **Ley N° 21.719 (art. 16 quáter)**, el tratamiento de datos sensibles de menores de 16 años requeriría el consentimiento del representante legal. Por eso **prohibimos** el uso de la App a menores de 16 años y aplicamos medidas para hacerlo efectivo: declaración al registrarte o al publicar sin cuenta; **eliminación de la cuenta** si detectamos o nos informan que perteneces a ese grupo; y, si el contenido se publicó **sin cuenta**, **eliminación de ese contenido y bloqueo del dispositivo** desde el que se publicó. Con todo, una autodeclaración de edad puede ser inexacta. El tratamiento de tus datos se rige por la **Política de Privacidad**.
 
 **Datos veraces.** Te comprometes a entregar información veraz, exacta y actualizada al crear y mantener tu cuenta.
 
@@ -81,7 +81,7 @@ El botón **SOS** de la App es solo una **ayuda complementaria**: cuando lo acti
 
 **Una cuenta por persona.** Cada persona puede mantener una sola cuenta, y no puedes ceder, vender ni transferir tu cuenta a un tercero. Para hacer cumplir esta regla podemos aplicar medidas razonables (por ejemplo, asociar una cuenta a un correo electrónico verificado), sin que ello implique una vigilancia exhaustiva de cada usuario.
 
-**Uso sin cuenta.** Algunas funciones de la App pueden usarse sin registrarte. Para publicar contenido (reseñas y alertas) y para usar ciertas funciones sí necesitas una cuenta.
+**Uso sin cuenta.** Puedes usar la App sin registrarte: ver el mapa, calcular rutas, ver alertas y talleres, y también **reportar y confirmar alertas comunitarias**. Antes de tu primer reporte o confirmación sin cuenta te pediremos **aceptar expresamente estos Términos y la Política de Privacidad** y **declarar tu edad**; ese contenido queda atribuido al **identificador de tu dispositivo** (ver Política de Privacidad, Secciones 3 y 7). Para **escribir reseñas de talleres**, **activar el SOS** y **guardar contactos de emergencia** sí necesitas una cuenta.
 
 **Suspensión y cierre.** Podemos **suspender o cerrar tu cuenta** si incumples estos Términos o la ley, en los términos descritos en la Sección 8. Cuando sea razonable y la situación lo permita, te avisaremos.
 
@@ -89,7 +89,7 @@ El botón **SOS** de la App es solo una **ayuda complementaria**: cuando lo acti
 
 ## 4. Contenido que publicas: reseñas y alertas
 
-La App te permite generar contenido, en particular **reseñas de talleres** (texto que escribes) y **alertas comunitarias** (el tipo de incidente y su ubicación en el mapa). A este contenido lo llamamos "contenido del usuario". Eres el único responsable del contenido que publiques.
+La App te permite generar contenido, en particular **reseñas de talleres** (texto que escribes) y **alertas comunitarias** (el tipo de incidente y su ubicación en el mapa, y las confirmaciones «Sigue ahí» / «Ya no está»). A este contenido lo llamamos "contenido del usuario", **tengas cuenta o no**: el contenido que publicas sin cuenta queda sujeto a las mismas reglas de esta sección, y eres el único responsable de lo que publiques.
 
 ### Conducta y contenido prohibidos
 
@@ -112,13 +112,16 @@ Está **absolutamente prohibido** publicar, almacenar, enlazar o distribuir, a t
 - Si detectas este tipo de contenido, **repórtalo de inmediato** usando la función de reporte dentro de la App (categoría de seguridad infantil) o escribiendo a **contacto@gobikeup.com**.
 - GoBike **removerá** este contenido, **cerrará** las cuentas involucradas y **escalará el caso a la autoridad competente** (en Chile, la **Policía de Investigaciones — PDI**, y, cuando corresponda, el **NCMEC** en EE. UU.), conforme a la ley aplicable.
 
+
+
 ### Funciones de seguridad y moderación
 
 Para que la comunidad sea segura y útil, la App ofrece, como parte del servicio:
 
-- **Aceptación previa de estos Términos** antes de poder publicar contenido del usuario.
-- La posibilidad de **reportar** contenido que consideres inapropiado y de **bloquear** a otros usuarios, de modo que dejes de ver su contenido.
-- **Moderación** de GoBike: podemos **revisar, moderar, editar la visibilidad o remover** contenido del usuario que infrinja estos Términos o la ley, así como **suspender o cerrar** las cuentas responsables. Procuramos actuar sobre los reportes que recibimos de forma **oportuna**.
+- **Aceptación previa de estos Términos** antes de poder publicar contenido del usuario, con cuenta (al registrarte) o sin cuenta (en la hoja que aparece antes de tu primer reporte).
+- La posibilidad de **reportar** contenido que consideres inapropiado y de **bloquear** a otros usuarios, de modo que dejes de ver su contenido. Puedes bloquear también al **autor de un reporte publicado sin cuenta**; en ese caso se bloquea el dispositivo desde el que se publicó, sin que la App te muestre su identificador.
+- **Retiro por la comunidad:** una alerta deja de mostrarse en el mapa cuando las confirmaciones «Ya no está» superan a las «Sigue ahí» (con al menos dos rechazos de personas distintas). Es una señal de vigencia, no una sanción: no afecta tu cuenta y puedes volver a reportar. Si crees que tu alerta se retiró por error, escríbenos a **contacto@gobikeup.com**.
+- **Moderación** de GoBike: podemos **revisar, moderar, editar la visibilidad o remover** contenido del usuario que infrinja estos Términos o la ley, así como **suspender o cerrar** las cuentas responsables y **bloquear los dispositivos** desde los que se publica contenido abusivo sin cuenta. Procuramos actuar sobre los reportes que recibimos de forma **oportuna**.
 
 La moderación puede ser previa o posterior a la publicación. No estamos obligados a monitorear todo el contenido, pero podemos hacerlo.
 
@@ -134,7 +137,7 @@ Sin embargo, para poder operar la App y ofrecer sus funciones, al publicar conte
 
 Al publicar contenido del usuario declaras y garantizas que **tienes todos los derechos necesarios** sobre ese contenido y que su publicación no infringe derechos de terceros ni la ley.
 
-Si eliminas tu contenido o cierras tu cuenta, dejaremos de usarlo conforme a esta licencia, **salvo** respecto de los **datos agregados y anonimizados que ya no permitan identificarte** y que se hubieran generado antes del cierre.
+Si eliminas tu contenido, cierras tu cuenta o, en el caso del contenido publicado **sin cuenta**, lo eliminas desde la App («Eliminar mi reporte») o se elimina automáticamente al cumplirse su plazo de conservación (30 días desde que deja de estar activo; ver Política de Privacidad, Sección 14), dejaremos de usarlo conforme a esta licencia, **salvo** respecto de los **datos agregados y anonimizados que ya no permitan identificarte** y que se hubieran generado antes.
 
 ---
 
@@ -155,6 +158,8 @@ La App, su código, diseño, marcas, contenidos propios y datos (incluidos los d
 - Interferir con la seguridad, integridad o disponibilidad de la App, su infraestructura o sus servidores.
 - Revender, redistribuir o explotar comercialmente la App o sus datos sin nuestra autorización por escrito.
 
+
+
 ---
 
 ## 7. Responsabilidad e indemnidad
@@ -173,13 +178,15 @@ La App, su código, diseño, marcas, contenidos propios y datos (incluidos los d
 
 ## 8. Vigencia, cambios y término
 
-**Vigencia.** Estos Términos rigen desde que los aceptas al crear tu cuenta y mientras la mantengas.
+**Vigencia.** Estos Términos rigen desde que los aceptas —al crear tu cuenta, o al aceptar la hoja que aparece antes de tu primer reporte sin cuenta— y mientras uses la App.
 
-**Cambios.** Podemos actualizar estos Términos para reflejar cambios en la App, en nuestras prácticas o en la ley. Cuando los cambios sean **relevantes** (por ejemplo, que afecten tus derechos, el alcance del SOS, el tratamiento de tu contenido o tus obligaciones), te lo avisaremos por medios razonables (dentro de la App o por correo electrónico) con antelación razonable, y **te pediremos que los aceptes expresamente** (por ejemplo, marcando una nueva casilla) para seguir usando las funciones afectadas. **No entenderemos que aceptas los cambios relevantes por el solo hecho de que sigas usando la App.** Si no aceptas los nuevos Términos, podrás dejar de usar la App y cerrar tu cuenta. La fecha de "Última actualización" indica la última versión.
+**Acceso a la versión que aceptaste.** Cada versión de estos Términos lleva su número y fecha, y la versión vigente está siempre disponible en **gobikeup.cl/terminos**, donde puedes **leerla, guardarla e imprimirla**. Al aceptarlos, la App registra el número de versión que aceptaste; si necesitas una versión anterior a la vigente, pídenosla a **contacto@gobikeup.com** y te la enviaremos.
+
+**Cambios.** Podemos actualizar estos Términos para reflejar cambios en la App, en nuestras prácticas o en la ley. Cuando los cambios sean **relevantes** (por ejemplo, que afecten tus derechos, el alcance del SOS, el tratamiento de tu contenido o tus obligaciones), te lo avisaremos dentro de la App —antes de que sigas usándola— y, cuando corresponda, por correo electrónico, y **te pediremos que los aceptes expresamente** (por ejemplo, marcando una nueva casilla) para seguir usando las funciones afectadas. **No entenderemos que aceptas los cambios relevantes por el solo hecho de que sigas usando la App.** Si no aceptas los nuevos Términos, podrás dejar de usar la App y cerrar tu cuenta. La fecha de "Última actualización" indica la última versión.
 
 **Término por tu parte.** Puedes dejar de usar la App y cerrar tu cuenta en cualquier momento, desde la App o escribiéndonos a **contacto@gobikeup.com**.
 
-**Término por nuestra parte.** Podemos suspender o terminar tu acceso a la App, total o parcialmente, si incumples estos Términos o la ley, o si es necesario por razones de seguridad o legales. Cuando sea razonable y la situación lo permita, te avisaremos.
+**Término por nuestra parte.** Podemos suspender o terminar tu acceso a la App, total o parcialmente, si incumples estos Términos o la ley, o si es necesario por razones de seguridad o legales. Si el incumplimiento proviene de contenido publicado **sin cuenta**, la medida equivalente es **bloquear el dispositivo** desde el que se publicó: ese dispositivo deja de poder reportar y confirmar alertas. Cuando sea razonable y la situación lo permita, te avisaremos.
 
 **Efectos del término.** Al cerrarse tu cuenta, dejarás de tener acceso a sus funciones. Algunas disposiciones, por su naturaleza, subsisten tras el término: en particular las relativas a la **licencia sobre datos agregados y anonimizados ya generados** (Sección 5) y a la **limitación de responsabilidad e indemnidad** (Sección 7). El tratamiento de tus datos personales tras el cierre se rige por la **Política de Privacidad**.
 
@@ -189,7 +196,7 @@ La App, su código, diseño, marcas, contenidos propios y datos (incluidos los d
 
 **Ley aplicable.** Estos Términos se rigen por las **leyes de la República de Chile**.
 
-**Fuero del consumidor.** Como consumidor conservas íntegramente los derechos que te otorga la **Ley N° 19.496**. En particular, **puedes ejercer tus acciones, a tu elección, ante el juez de tu propio domicilio o el del proveedor**, sin que se te pueda imponer otro tribunal mediante una cláusula del contrato, y por los procedimientos que esa ley contempla a tu favor (**Art. 50 H y Art. 50 A**). Nada en estos Términos altera la competencia que la ley fija en tu beneficio. También puedes recurrir al **Servicio Nacional del Consumidor (SERNAC)**.
+**Fuero del consumidor.** Como consumidor conservas íntegramente los derechos que te otorga la **Ley N° 19.496**. En particular, **puedes ejercer tus acciones, a tu elección, ante el juez de tu propio domicilio o el del proveedor**, sin que se te pueda imponer otro tribunal mediante una cláusula del contrato, y por los procedimientos que esa ley contempla a tu favor (**Art. 50 H y Art. 50 A**). Nada en estos Términos altera la competencia que la ley fija en tu beneficio. También puedes recurrir al **Servicio Nacional del Consumidor (SERNAC)**. [Verificado contra el texto: el fuero y la prohibición de prórroga de competencia están en los arts. 50 H y 50 A; la cita anterior al "art. 16 g) / 16 G" era incorrecta —16 G no existe y la letra g) trata del desequilibrio contractual, no de la competencia— y se corrigió.]
 
 **Contrato de adhesión.** Estos Términos constituyen un contrato de adhesión redactado en **castellano** y de forma **legible**, conforme al Art. 17 de la Ley N° 19.496.
 
@@ -207,6 +214,8 @@ Si descargaste la App desde la App Store, además de lo anterior aplica lo sigui
 6. **Cumplimiento de normas de exportación.** Declaras que (i) no te encuentras en un país sujeto a embargo del Gobierno de los EE. UU. o designado como país que "apoya el terrorismo", y (ii) no figuras en ninguna lista de partes prohibidas o restringidas del Gobierno de los EE. UU.
 7. **Apple como tercero beneficiario.** Apple y sus subsidiarias son **terceros beneficiarios** de estos Términos y, una vez que los aceptas, **tendrán derecho a exigir su cumplimiento** frente a ti como tercero beneficiario.
 
+
+
 ---
 
 ## 10. Disposiciones generales
@@ -217,7 +226,7 @@ Si descargaste la App desde la App Store, además de lo anterior aplica lo sigui
 
 **Autorización de tus contactos de emergencia.** Al registrar **contactos de emergencia**, declaras que **cuentas con su autorización** para registrarlos y para que reciban **mensajes de WhatsApp** y tu **ubicación** cuando actives el SOS. Eres responsable de mantener esa autorización y de informar a esas personas sobre esta función.
 
-**Servicios y enlaces de terceros.** La App utiliza o se integra con servicios de **terceros independientes**, entre ellos: **WhatsApp LLC / WhatsApp Business Platform** (grupo Meta; envío del mensaje de WhatsApp del SOS), **OpenFreeMap** (tiles del mapa), **Google** y/o **Photon** (geocodificación de direcciones), **Resend** (envío de correos), y **deep links** hacia **WhatsApp** o el **marcador telefónico** para contactar talleres. Estos servicios son operados por terceros bajo sus **propios términos y políticas**; GoBike no controla ni responde por su disponibilidad, contenido o funcionamiento, sin perjuicio de tus derechos como consumidor frente a GoBike.
+**Servicios y enlaces de terceros.** La App utiliza o se integra con servicios de **terceros independientes**, entre ellos: **WhatsApp LLC (WhatsApp Business Platform, grupo Meta) Business Platform** (envío del mensaje de WhatsApp del SOS), **OpenFreeMap** (tiles del mapa), **Google** y/o **Photon** (geocodificación de direcciones), **Resend** (envío de correos), y **deep links** hacia **WhatsApp** o el **marcador telefónico** para contactar talleres. Estos servicios son operados por terceros bajo sus **propios términos y políticas**; GoBike no controla ni responde por su disponibilidad, contenido o funcionamiento, sin perjuicio de tus derechos como consumidor frente a GoBike.
 
 **Cesión.** No puedes ceder ni transferir tus derechos u obligaciones bajo estos Términos sin nuestra autorización previa por escrito. GoBike **sí podrá ceder o transferir** estos Términos —por ejemplo, en el contexto de una **venta, fusión, reorganización o transferencia de activos**—, manteniéndose en todo caso los derechos que la ley te garantiza como consumidor y como titular de datos personales.
 
@@ -227,4 +236,4 @@ Si descargaste la App desde la App Store, además de lo anterior aplica lo sigui
 
 ---
 
-*GoBike SpA — RUT 78.427.191-9 — Avda. Vitacura 5480 of. 38, Vitacura, Santiago, Chile. Contacto: contacto@gobikeup.com — gobikeup.cl. Representante legal: Sebastián Torres Erazo. Versión 0.4 — Última actualización: 14 de julio de 2026.*
+*GoBike SpA — RUT 78.427.191-9 — Avda. Vitacura 5480 of. 38, Vitacura, Santiago, Chile. Contacto: contacto@gobikeup.com — gobikeup.cl. Representante legal: Sebastián Torres Erazo. Versión 0.5 — Última actualización: 29 de agosto de 2026.*
