@@ -1,7 +1,6 @@
-import fs from "node:fs"
-import path from "node:path"
 import { Metadata } from "next"
 import { LegalDocument } from "@/components/legal-document"
+import { readLegalContent } from "@/lib/legal-content"
 
 export const metadata: Metadata = {
   title: { absolute: "Política de Privacidad — GoBikeUp" },
@@ -13,9 +12,5 @@ export const metadata: Metadata = {
 }
 
 export default function PrivacidadPage() {
-  const content = fs.readFileSync(
-    path.join(process.cwd(), "content/legal/privacidad.md"),
-    "utf-8"
-  )
-  return <LegalDocument content={content} />
+  return <LegalDocument content={readLegalContent("privacidad.md")} />
 }
