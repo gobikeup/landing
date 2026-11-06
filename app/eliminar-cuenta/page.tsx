@@ -49,10 +49,58 @@ export default function EliminarCuentaPage() {
         </p>
         <p>
           Al confirmar la eliminación, tus datos personales se eliminan de forma
-          permanente de nuestros sistemas, salvo la información puntual que la
-          ley nos obligue a conservar (ver nuestra{" "}
+          permanente de nuestros sistemas, salvo las excepciones acotadas que se
+          detallan a continuación (ver también nuestra{" "}
           <Link href="/privacidad">Política de Privacidad</Link>).
         </p>
+        <h2>Qué se conserva y por cuánto tiempo</h2>
+        <p>
+          Al eliminar tu cuenta borramos de forma permanente tus datos
+          personales asociados: tu cuenta, historial de pedaleos, estadísticas
+          de actividad, contactos de emergencia y reseñas. Tus alertas
+          comunitarias públicas se eliminan o se anonimizan/desvinculan de tu
+          identidad. Solo se conservan, de forma acotada, las siguientes
+          categorías:
+        </p>
+        <ul>
+          <li>
+            <strong>Ubicación de tus emergencias SOS:</strong> se conserva hasta{" "}
+            <strong>90 días</strong> y luego se elimina automáticamente.
+          </li>
+          <li>
+            <strong>
+              Direcciones IP, registros técnicos (logs) y telemetría de errores:
+            </strong>{" "}
+            hasta <strong>90 días</strong>.
+          </li>
+          <li>
+            <strong>Respaldos cifrados:</strong> tus datos pueden permanecer un
+            período breve en respaldos cifrados antes de su sobrescritura
+            definitiva, sin usarse para ninguna otra finalidad.
+          </li>
+          <li>
+            <strong>Información que la ley nos obligue a conservar:</strong> solo
+            durante el plazo legal aplicable y aislada de cualquier otro uso.
+          </li>
+          <li>
+            <strong>Aportes al mapa de movilidad:</strong> no están ligados a tu
+            cuenta, así que no podemos ubicarlos para borrarlos. El recorrido de
+            cada aporte se borra solo en menos de 24 horas, y lo que queda son
+            conteos junto a los de otras personas.
+          </li>
+          <li>
+            <strong>Huellas de promociones:</strong> si participaste en una
+            promoción y borras tu cuenta antes de su cierre, las huellas de tu
+            dispositivo y de tu correo se conservan hasta ese día, solo para que
+            no se vuelva a reclamar el beneficio desde el mismo teléfono o
+            correo, y luego se borran.
+          </li>
+          <li>
+            <strong>Cupo usado de una promoción:</strong> si recibiste un código,
+            el registro deja de estar ligado a ti y queda solo como un cupo usado
+            de la promoción, para contar los cupos.
+          </li>
+        </ul>
       </article>
     </main>
   )
