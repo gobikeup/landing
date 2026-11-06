@@ -33,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
+      url: "https://www.gobikeup.cl/promociones/bike-itau",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
+    {
       url: "https://www.gobikeup.cl/eliminar-cuenta",
       lastModified: new Date(),
       changeFrequency: "yearly",

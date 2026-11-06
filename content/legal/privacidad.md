@@ -1,9 +1,9 @@
 # Política de Privacidad — GoBikeUp
 
-**Última actualización: 5 de noviembre de 2026**
-**Versión 0.5.1**
+**Última actualización: 6 de noviembre de 2026**
+**Versión 0.5.2**
 
-Versión anterior: [0.5, del 29 de agosto de 2026](/privacidad/v0-5).
+Versiones anteriores: [0.5.1, del 5 de noviembre de 2026](/privacidad/v0-5-1) y [0.5, del 29 de agosto de 2026](/privacidad/v0-5).
 
 > **Pedalea tranquilo.** Esta política te explica, en lenguaje claro, qué Datos Personales recolectamos cuando usas la App, para qué los usamos, con quién los compartimos y cómo puedes controlarlos. Léela con calma: queremos que sepas exactamente qué pasa con tu información.
 
@@ -113,7 +113,7 @@ Recolectamos únicamente los Datos Personales necesarios para que la App funcion
 | **Interacciones con talleres (analítica propia)** | Eventos por taller: ver ficha, tocar llamar, tocar WhatsApp, tocar navegar | Entender qué talleres se usan y cómo, para mejorar el producto (analítica de producto **propia**, no de terceros) | GoBike SpA — Hetzner (UE) | Sí |
 | **Datos de postulación GoBikeTalleres (B2B)** | Nombre de contacto, correo, teléfono, dirección, coordenadas (lat/lng), motivación y origen de la referencia del taller postulante | Recibir y gestionar postulaciones de talleres a la plataforma (ver Sección 9) | GoBike SpA — Hetzner (UE); correo transaccional vía Resend (EE.UU.) | Sí (formulario abierto) |
 | **Mensajes de soporte y sugerencias** | El mensaje que escribes y el tipo de solicitud; un **correo de contacto si decides darlo** (sin cuenta) o el nombre y correo de tu cuenta; el recorrido al que se refiere, si lo adjuntas; y datos técnicos para reproducir el problema: versión de la App, sistema operativo y su versión, modelo del teléfono e identificador del dispositivo | Atender tu solicitud, responderte si dejaste un correo y mejorar la App | GoBike SpA — Hetzner (UE); el aviso al equipo se envía por correo vía Resend (EE.UU.) | Sí |
-| **Promociones** | Que tu cuenta recibió el código de una promoción con terceros (por ejemplo, una prueba gratis de un servicio de bicicletas), la fecha y hora en que lo recibió, y el estado del envío del correo con el código (intentos y fecha de envío) y, para limitar la promoción a una por teléfono y por correo, una huella del identificador de tu dispositivo y otra de tu correo (sin las variantes con «+» ni los puntos de Gmail), calculadas con una llave secreta nuestra (HMAC). En este registro no guardamos tu identificador ni tu correo, solo esas huellas, que sirven únicamente para comprobar si ya se usaron | Entregarte el código por correo y en la App, no entregarlo dos veces y contar los cupos. No compartimos tus datos con la empresa aliada: solo cifras agregadas, como cuántos códigos se entregaron | GoBike SpA — Hetzner (UE); el correo se envía vía Resend (EE.UU.) | No (requiere cuenta) |
+| **Promociones** | Que tu cuenta recibió el código de una promoción con terceros (por ejemplo, una prueba gratis de un servicio de bicicletas), la fecha y hora en que lo recibió, y el estado del envío del correo con el código (intentos y fecha de envío) y, para limitar la promoción a una por teléfono y por correo, una huella del identificador de tu dispositivo y otra de tu correo (sin las variantes con «+» ni los puntos de Gmail), calculadas con una llave secreta nuestra (HMAC). En este registro no guardamos tu identificador ni tu correo, solo esas huellas, que sirven únicamente para comprobar si ya se usaron | Entregarte el código por correo y en la App, no entregarlo dos veces, contar los cupos y aplicar el límite de una por teléfono y por correo. No compartimos tus datos con la empresa aliada: solo cifras agregadas, como cuántos códigos se entregaron | GoBike SpA — Hetzner (UE); el correo se envía vía Resend (EE.UU.) | No (requiere cuenta) |
 | **Texto de búsqueda de direcciones** | Lo que escribes para buscar una dirección (puede contener tu domicilio) | Convertir la dirección en coordenadas (geocoding) | **Google Geocoding (EE.UU.)** — proveedor en producción; la consulta viaja vía nuestro backend (Hetzner, UE) | Sí |
 | **Dirección IP** | IP de tu conexión | Seguridad, prevención de abuso, enrutamiento y entrega del servicio. Cuando la App envía una contribución al mapa, **no registramos tu IP**: solo usamos una huella temporal de ella, de la que no se puede recuperar, para limitar envíos abusivos | Cloudflare (proxy/WAF, global; ve la IP en tránsito, también la de las contribuciones), Hetzner (UE), OpenFreeMap | Sí |
 | **Telemetría de errores (backend)** | Stack traces, breadcrumbs y contexto técnico de los errores que ocurren en **nuestro servidor** (no en tu dispositivo) | Detectar y corregir fallas, mejorar estabilidad (ver Sección 12). La App no envía telemetría; se procesa **server-side** y se depura (*scrub*) para no incluir Datos Personales. **Nunca** incluye el contenido de tus recorridos ni de las contribuciones al mapa | GoBike SpA — Hetzner (UE); telemetría depurada en Sentry (EE.UU.) | No (no se recolecta de tu dispositivo) |
@@ -149,6 +149,7 @@ Tratamos tus Datos Personales solo cuando existe una base de licitud que lo perm
 | Publicar reviews de talleres | Texto, calificación, nombre | Ejecución del servicio y **consentimiento** para la publicación (arts. 12 y 13) |
 | Atender tus mensajes de soporte y sugerencias | Mensaje, correo de contacto, datos técnicos y recorrido adjunto | Ejecución del servicio que solicitas al escribirnos (art. 13); el correo de contacto, porque decides entregarlo para que te respondamos (art. 12) |
 | Entregarte el beneficio de una promoción en la que participas | Datos de cuenta (correo), registro de la entrega | Ejecución del contrato: las bases de cada promoción, publicadas antes de que empiece (art. 13) |
+| Aplicar el límite de una promoción por teléfono y por correo | Huella del identificador de tu dispositivo y huella de tu correo, calculadas con una llave secreta nuestra | Ejecución del contrato: las bases de cada promoción (art. 13). Si borras tu cuenta antes del cierre, interés legítimo del Responsable en que el beneficio no se vuelva a reclamar (art. 13), ponderado frente a tus derechos |
 | Medir la calidad de las rutas que sugerimos (ruta propuesta y recorridos cancelados) | Historial de pedaleos | Interés legítimo del Responsable (art. 13), ponderado frente a tus derechos |
 | Analítica de producto propia sobre uso de talleres | Interacciones con talleres | Interés legítimo del Responsable (art. 13), ponderado frente a tus derechos |
 | Detectar y corregir errores (telemetría) | Telemetría y diagnóstico, IP | Interés legítimo del Responsable (art. 13) |
@@ -625,13 +626,15 @@ Al confirmar el borrado, la App ejecuta una **purga real** de tu cuenta: **elimi
 
 ### Excepciones reales
 
-Solo unas pocas categorías no se borran de inmediato, por razones acotadas y legítimas:
+Estas categorías no se borran de inmediato, por razones acotadas y legítimas:
 
 - **Ubicación de SOS:** se rige por su propio plazo de **90 días** con borrado automático (ver Sección 14), porque puede ser relevante para tu seguridad y la de tus contactos.
+- **IP del cliente, logs de infraestructura y telemetría de errores (depurada, en Sentry):** se conservan **90 días** y se eliminan automáticamente al vencer el plazo (ver Sección 14).
 - **Respaldos cifrados:** tus datos pueden persistir por un **período breve** en respaldos cifrados antes de su sobrescritura definitiva, sin ser usados para ninguna otra finalidad.
 - **Obligaciones legales:** si la ley nos exige conservar algún dato, lo mantendremos solo por el plazo legal y aislado de cualquier otro uso.
 - **Mapa de movilidad:** tus aportes no están ligados a tu cuenta, así que no podemos ubicarlos para borrarlos. El recorrido de cada aporte se borra solo en menos de 24 horas, y lo que queda son conteos junto a los de otras personas (ver Sección 13).
 - **Huellas de promociones:** si participaste en una promoción y borras tu cuenta antes de su cierre, las huellas de tu dispositivo y de tu correo se conservan hasta ese día, solo para que no se vuelva a reclamar el beneficio desde el mismo teléfono o correo, y luego se borran (ver Sección 14).
+- **Cupo usado de una promoción:** al borrar tu cuenta, el registro deja de estar ligado a ti y queda solo como un cupo usado de la promoción, para contar los cupos (ver Sección 14).
 
 Si en lugar de borrar la cuenta solo quieres **cerrar sesión** o **dejar de usar una función** (por ejemplo, revocar el permiso de ubicación o de notificaciones), puedes hacerlo sin eliminar tu cuenta (ver Sección 15).
 
@@ -723,3 +726,5 @@ Podemos actualizar esta política cuando cambien nuestras prácticas de tratamie
 Te recomendamos revisar esta política periódicamente. La versión vigente siempre estará disponible dentro de la App y en **gobikeup.cl**. Si continúas usando la App después de que un cambio entre en vigencia, entendemos que estás al tanto de la versión actualizada; esto no reemplaza el consentimiento que te pidamos por separado cuando la ley lo exija.
 
 **Versión 0.5.1.** Esta versión suma la grabación de pedaleos (también con la pantalla apagada), el historial recortado y el mapa de movilidad anónimo. Como el mapa se basa en nuestro interés legítimo y puedes apagarlo cuando quieras, te lo informamos con un aviso de actualización dentro de la App, sin pedirte que vuelvas a aceptar la política.
+
+**Versión 0.5.2.** Esta versión aclara en la Sección 4 la base de licitud del límite de una promoción por teléfono y por correo, y precisa en las Secciones 3 y 16 esa finalidad y las excepciones al borrar la cuenta. No cambia los datos que tratamos ni para qué los usamos.
